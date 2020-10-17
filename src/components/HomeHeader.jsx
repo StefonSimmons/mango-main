@@ -41,10 +41,7 @@ const Btn = styled.button`
   border: rgb(233,115,40);
   border-radius: 5px;
   box-shadow: 5px 5px 0px rgb(233,115,40)
-
-
 `
-
 const Image = styled.img`
   width: 50%;
 `
