@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import {fadeIn} from '../components/HomeHeader'
 import city from '../assets/city.jpg'
 
 const BackgroundImage = styled.div`
@@ -9,7 +9,7 @@ const BackgroundImage = styled.div`
   background-repeat: no-repeat
 `
 const AboutSection = styled.section`
-  height: 900px;
+  height: 990px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -22,7 +22,7 @@ const AboutBox = styled.section`
   margin: 100px;
   padding: 100px;
   border-radius: 1px;
-
+  animation: ${fadeIn} 2s ease-in-out;
 `
 const AboutTitle = styled.h2`
   text-align: center;
