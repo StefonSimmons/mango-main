@@ -1,7 +1,7 @@
 import React from 'react'
 import ashlea from '../assets/ashlea-contact.png'
 import styled from 'styled-components'
-
+import {HeaderBar} from './WhatIDo'
 import { AboutTitle } from '../components/About'
 
 const ContactSection = styled.div`
@@ -11,6 +11,10 @@ const ContactSection = styled.div`
   font-family: 'Manrope', sans-serif;
   letter-spacing: 2px;
   font-weight: 700
+`
+const Bar = styled(HeaderBar)`
+  border-top: solid rgb(59,150,201, 0) 10px;
+  border-bottom: solid rgb(59,150,201) 10px;
 `
 const Form = styled.form`
   display: flex;
@@ -79,16 +83,19 @@ const SendBtn = styled.input`
 
 export default function ContactMe() {
   return (
-    <ContactSection id='contact'>
-      <Form onSubmit={''}>
-        <Title>Contact Me</Title>
-        <Input type="text" className='input' placeholder='Name'/>
-        <Input type="text" className='input' placeholder='Email'/>
-        <Input type="text" className='input' placeholder='Subject'/>
-        <Message type="text" className='input' placeholder='Type your message here...' />
-        <SendBtn type="submit" value="Send!"/>
-      </Form>
-      <Image src={ashlea} alt="" />
-    </ContactSection>
+    <>
+      <Bar></Bar>
+      <ContactSection id='contact'>
+        <Form onSubmit={''}>
+          <Title>Contact Me</Title>
+          <Input type="text" className='input' placeholder='Name' />
+          <Input type="text" className='input' placeholder='Email' />
+          <Input type="text" className='input' placeholder='Subject' />
+          <Message type="text" className='input' placeholder='Type your message here...' />
+          <SendBtn type="submit" value="Send!" />
+        </Form>
+        <Image src={ashlea} alt="" />
+      </ContactSection>
+    </>
   )
 }

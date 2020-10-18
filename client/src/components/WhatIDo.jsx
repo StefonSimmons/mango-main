@@ -6,8 +6,8 @@ import outreachImg from '../assets/outreach.png'
 import writingImg from '../assets/writing.png'
 import researchImg from '../assets/research.png'
 
-const HeaderBar = styled.div`
-  height: 100px;
+export const HeaderBar = styled.div`
+  height: 75px;
   width: 100vw;
   padding: 20px 0;
   background-color: rgb(14,24,84);
@@ -20,6 +20,7 @@ const HeaderTitle = styled.h2`
   text-align: center;
   font-size: 40px;
   font-weight: 700;
+  letter-spacing: 5px;
   color: rgb(233,115,40);
 `
 const WorkContainer = styled.div`
@@ -27,7 +28,7 @@ const WorkContainer = styled.div`
   flex-direction: row;
 `
 const Work = styled.section`
-  height: 500px;
+  height: 90vh;
   width: 33.33%;
   display: flex;
   align-items: flex-end;
@@ -37,7 +38,7 @@ const Box = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 50%;
+  height: 100%;
   width: 100%;
   background: rgba(14,24,84,.35);
   font-family: 'Manrope', sans-serif;
@@ -45,19 +46,19 @@ const Box = styled.div`
 `
 const Title = styled.h3`
   color: rgb(233,115,40);
-  background: rgba(14,24,84,.2);
+  background: rgba(14,24,84,.1);
   box-shadow: 2px 2px 10px 5px rgba(14,24,84,.20);
   border-radius: 5px;
-  padding: 5px;
+  padding: 5px 20px;
   margin-bottom: 50px;
-  letter-spacing: 2px;
-  font-size: 24px;
+  letter-spacing: 5px;
+  font-size: 36px;
 `
 const Btn = styled.button`
   background-color: rgba(0,0,0,0);
   color: rgb(233,115,40);
   color: white;
-  font-size: 18px;
+  font-size: 24px;
   border: rgb(233,115,40) 1px solid;
   padding: 15px 30px;
   transition: all .3s ease-in-out;
