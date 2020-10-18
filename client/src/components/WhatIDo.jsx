@@ -9,15 +9,17 @@ import researchImg from '../assets/research.png'
 export const HeaderBar = styled.div`
   height: 75px;
   width: 100vw;
-  padding: 20px 0;
+  padding: 25px 0;
   background-color: rgb(14,24,84);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: solid rgb(59,150,201) 10px;
+  // border-top: solid rgb(59,150,201) 10px;
+  // border-top: solid rgb(222,196,94) 10px;
 `
-const HeaderTitle = styled.h2`
+export const HeaderTitle = styled.h2`
   text-align: center;
+  font-family:'Manrope', sans-serif;
   font-size: 40px;
   font-weight: 700;
   letter-spacing: 5px;
@@ -28,7 +30,7 @@ const WorkContainer = styled.div`
   flex-direction: row;
 `
 const Work = styled.section`
-  height: 90vh;
+  height: 70vh;
   width: 33.33%;
   display: flex;
   align-items: flex-end;
@@ -42,12 +44,13 @@ const Box = styled.div`
   width: 100%;
   background: rgba(14,24,84,.35);
   font-family: 'Manrope', sans-serif;
-  font-weight: 700;
 `
 const Title = styled.h3`
-  color: rgb(233,115,40);
-  background: rgba(14,24,84,.1);
-  box-shadow: 2px 2px 10px 5px rgba(14,24,84,.20);
+  color: rgb(14,24,84);
+  // color: rgba(233,115,40,.9);
+  background: rgba(233,115,40,.9);
+  // background: rgb(14,24,84);
+  box-shadow: 0px 0px 10px 5px rgba(14,24,84,.2);
   border-radius: 5px;
   padding: 5px 20px;
   margin-bottom: 50px;
@@ -56,16 +59,16 @@ const Title = styled.h3`
 `
 const Btn = styled.button`
   background-color: rgba(0,0,0,0);
-  color: rgb(233,115,40);
   color: white;
   font-size: 24px;
   border: rgb(233,115,40) 1px solid;
   padding: 15px 30px;
   transition: all .3s ease-in-out;
-
+  
   &:hover{
     background-color: rgba(255,135,60,1);
     transform: scale(1.05);
+    font-weight: 700;
     box-shadow: 5px 5px 0px rgb(233,115,40);
     border: rgba(255,135,60,.1) 1px solid;
     color: black
@@ -130,6 +133,8 @@ export default function WhatIDo() {
       <WorkContainer >
         {iDo}
       </WorkContainer>
+      <HeaderBar>
+      </HeaderBar>
     </>
   )
 }

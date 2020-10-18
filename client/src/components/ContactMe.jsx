@@ -1,49 +1,55 @@
 import React from 'react'
 import ashlea from '../assets/ashlea-contact.png'
 import styled from 'styled-components'
-import {HeaderBar} from './WhatIDo'
-import { AboutTitle } from '../components/About'
+import { HeaderBar, HeaderTitle } from './WhatIDo'
+// import { AboutTitle } from './About'
 
+const Bar = styled(HeaderBar)`
+  border-top: solid rgba(222,196,94,0) 10px;
+  background-color: rgb(233,115,40)
+`
 const ContactSection = styled.div`
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   background-color: rgb(233,115,40);
   font-family: 'Manrope', sans-serif;
   letter-spacing: 2px;
-  font-weight: 700
-`
-const Bar = styled(HeaderBar)`
-  border-top: solid rgb(59,150,201, 0) 10px;
-  border-bottom: solid rgb(59,150,201) 10px;
+  font-weight: 700;
+  padding-bottom: 95px
 `
 const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 50%;
+  height: 50%;
+  border-radius: 5px;
+  padding: 30px 25px;
 `
-const Title = styled(AboutTitle)`
+const Title = styled(HeaderTitle)`
   color: rgb(14,24,84);
   margin-bottom: 20px;
 `
 const Image = styled.img`
   width: 50%
+  height: 50%;
 `
 const Input = styled.input`
   height: 60px;
   width: 66%;
   font-family: 'Manrope', sans-serif;
   font-size: 18px;
+  font-weight: 700;
   letter-spacing: 2px;
   padding: 0 20px;
   margin: 8px 0;
   background: rgba(0,0,0,0);
-  border: white solid 1px;
-  color: white;
+  border: rgb(14,24,84) solid 1px;
+  color: rgb(14,24,84);
 
   &::placeholder{
-    color: white
+    color: rgb(14,24,84)
   }
 `
 const Message = styled.textarea`
@@ -51,15 +57,16 @@ height: 180px;
 width: 66%;
 font-family: 'Manrope', sans-serif;
 font-size: 18px;
+font-weight: 700;
 letter-spacing: 2px;
 padding: 20px;
 margin: 8px 0;
 background: rgba(0,0,0,0);
-border: white solid 1px;
-color: white;
+border: rgb(14,24,84) solid 1px;
+color: rgb(14,24,84);
 
 &::placeholder{
-  color: white
+  color: rgb(14,24,84)
 }
 `
 const SendBtn = styled.input`
@@ -67,10 +74,12 @@ const SendBtn = styled.input`
   bottom: 4%;
   width: 150px;
   height: 60px;
-  border: white 1px solid;
+  border: rgb(14,24,84) 1px solid;
+  background: rgba(255,255,255);
+  color: rgb(14,24,84);
   font-family: 'Manrope', sans-serif;
-  font-size: 18px;
-  letter-spacing: 2px;
+  font-size: 20px;
+  letter-spacing: 4px;
   transition: all .3s ease-in-out;
   
   &:hover{
@@ -84,10 +93,12 @@ const SendBtn = styled.input`
 export default function ContactMe() {
   return (
     <>
-      <Bar></Bar>
-      <ContactSection id='contact'>
+      <Bar id='contact'>
+        <Title>Contact Me</Title>
+      </Bar>
+      <ContactSection>
         <Form onSubmit={''}>
-          <Title>Contact Me</Title>
+          {/* <Title>Contact Me</Title> */}
           <Input type="text" className='input' placeholder='Name' />
           <Input type="text" className='input' placeholder='Email' />
           <Input type="text" className='input' placeholder='Subject' />

@@ -22,6 +22,7 @@ code {
   animation: slideIn 2s linear .1s 2 alternate forwards;
 }
 
+
 @keyframes slideIn{
   0%{
     left: 70%;

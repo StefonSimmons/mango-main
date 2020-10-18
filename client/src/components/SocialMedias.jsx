@@ -10,7 +10,7 @@ const LinkList = styled.ul`
   justify-content: space-between;
   width: 250px
 `
-const MediumLnk = styled(Link)`
+const MediumLnk = styled.a`
   color: rgb(38,38,38);
   text-decoration: none
 `
@@ -23,7 +23,7 @@ export default function SocialMedias() {
     <LinkList>
       <Item><img src={twitter} alt="twitter-icon" /></Item>
       <Item><img src={linkedin} alt="linkedin-icon" /></Item>
-      <MediumLnk to='https://medium.com/@ashleaamorgan'>Medium</MediumLnk>
+      <MediumLnk href='https://medium.com/@ashleaamorgan' target='_blank' >Medium</MediumLnk>
     </LinkList>
   )
 }

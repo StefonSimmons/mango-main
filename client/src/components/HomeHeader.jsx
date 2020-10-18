@@ -54,7 +54,8 @@ const NavBar = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: solid rgb(59,150,201) 10px;
+  // border-bottom: solid rgb(59,150,201) 10px;
+  // border-bottom: solid rgb(222,196,94) 10px;
 `
 const BtnSection = styled.section`
   display: flex;
