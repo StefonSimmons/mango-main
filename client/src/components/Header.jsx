@@ -9,6 +9,7 @@ const HeaderTag = styled.header`
   display: flex;
   justify-content: center;
   background-color: rgb(14,24,84);
+  padding-bottom: 10px
 `
 const Lnk = styled(Link)`
   text-decoration: none;
