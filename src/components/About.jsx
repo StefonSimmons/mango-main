@@ -24,7 +24,7 @@ const AboutBox = styled.section`
   border-radius: 1px;
   animation: ${fadeIn} 2s ease-in-out;
 `
-const AboutTitle = styled.h2`
+export const AboutTitle = styled.h2`
   text-align: center;
   font-size: 40px;
   font-weight: 700;

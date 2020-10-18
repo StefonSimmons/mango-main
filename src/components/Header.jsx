@@ -10,7 +10,9 @@ const HeaderTag = styled.header`
 const Section = styled.section`
   text-align: center;
   font-family: 'Manrope', sans-serif;
-  font-size: 18px
+  font-size: 28px;
+  letter-spacing: 2px;
+  font-weight: 700
 `
 const Logo = styled.img`
   margin: 10px 0

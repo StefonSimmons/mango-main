@@ -1,5 +1,5 @@
 import React from 'react'
-import {useLocation} from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import styled, { keyframes } from 'styled-components'
 
 import ashlea from '../assets/ashlea1.png'
@@ -48,7 +48,6 @@ const BtnSection = styled.section`
   margin: 15px 0;
   position: relative;
   animation: ${slideIn} 1.5s linear;
-
 `
 const Btn = styled.button`
   padding: 6px;
@@ -90,7 +89,9 @@ export default function HomeHeader() {
             <a href="https://mango-mosaic.netlify.app/blog" target='_blank' rel="noopener noreferrer">
               <Btn>Blog</Btn>
             </a>
-            <Btn>Contact Me</Btn>
+            <a href='#contact'>
+              <Btn>Contact Me</Btn>
+            </a>
           </BtnSection>
         </Center>
       </LeftArea>
