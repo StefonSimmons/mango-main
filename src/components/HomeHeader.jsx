@@ -1,4 +1,5 @@
 import React from 'react'
+import {useLocation} from 'react-router-dom'
 import styled, { keyframes } from 'styled-components'
 
 import ashlea from '../assets/ashlea1.png'
@@ -64,11 +65,15 @@ const Btn = styled.button`
     box-shadow: 5px 5px 0px rgb(213,95,20);
   }
 `
+
 const Image = styled.img`
   width: 50%;
 `
 
 export default function HomeHeader() {
+
+  const location = useLocation()
+  console.log(location.hash)
   return (
     <Main>
       <LeftArea>
@@ -79,7 +84,9 @@ export default function HomeHeader() {
             <Title>Writer.</Title>
           </Titles>
           <BtnSection>
-            <Btn>What I Do</Btn>
+            <a href='#work'>
+              <Btn>What I Do</Btn>
+            </a>
             <a href="https://mango-mosaic.netlify.app/blog" target='_blank' rel="noopener noreferrer">
               <Btn>Blog</Btn>
             </a>
@@ -87,7 +94,7 @@ export default function HomeHeader() {
           </BtnSection>
         </Center>
       </LeftArea>
-      <Image src={ashlea} alt="" />
+      <Image src={ashlea} alt="ashlea" />
     </Main>
   )
 }

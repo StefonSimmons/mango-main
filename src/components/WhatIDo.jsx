@@ -110,7 +110,7 @@ export default function WhatIDo() {
   })
 
   return (
-    <WorkContainer>
+    <WorkContainer id='work'>
       {iDo}
     </WorkContainer>
   )
