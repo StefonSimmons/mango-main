@@ -35,6 +35,7 @@ const Title = styled.h2`
   border-radius: 5px;
   padding: 5px;
   margin-bottom: 50px;
+  letter-spacing: 2px;
   font-size: 24px;
 `
 const Btn = styled.button`
