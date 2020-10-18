@@ -4,11 +4,19 @@ import styled, { keyframes } from 'styled-components'
 
 import ashlea from '../assets/ashlea1.png'
 
+// animation
+export const fadeIn = keyframes`
+  0%{opacity: 0}
+  100%{opactiy: 1}
+`
+const slideIn = keyframes`
+  0%{left: 100%; opacity: 0}
+  100%{left: 0%; opacity: 1}
+`
 
 const Main = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
 `
 const LeftArea = styled.div`
   background-color: rgb(14,24,84);
@@ -21,15 +29,6 @@ const LeftArea = styled.div`
 `
 const Center = styled.section`
   width: 350px;
-`
-// animation
-export const fadeIn = keyframes`
-  0%{opacity: 0}
-  100%{opactiy: 1}
-`
-const slideIn = keyframes`
-  0%{left: 100%; opacity: 0}
-  100%{left: 0%; opacity: 1}
 `
 const Titles = styled.section`
   text-align: left;

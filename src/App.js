@@ -6,6 +6,8 @@ import About from './components/About'
 import WhatIDo from './components/WhatIDo'
 import ContactMe from './components/ContactMe'
 import Footer from './components/Footer'
+import Writing from './components/Writing'
+
 
 function App() {
   return (
@@ -20,7 +22,7 @@ function App() {
       </Route>
 
       <Route path='/writing'>
-        <h1>Hi there</h1>
+        <Writing />
       </Route>
 
       <Footer />

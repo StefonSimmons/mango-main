@@ -96,16 +96,12 @@ export default function WhatIDo() {
     const formatedText = work.text.charAt(0).toUpperCase().concat(work.text.slice(1)) //proper case
     return (
       <Work style={work.style}>
-
         <Box>
-
           <Title>{formatedText}</Title>
           <Link to='/writing'>
             <Btn>Go to</Btn>
           </Link>
-
         </Box>
-
       </Work>
     )
   })
