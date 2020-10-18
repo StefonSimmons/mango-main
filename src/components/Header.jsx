@@ -5,26 +5,6 @@ import styled, { keyframes } from 'styled-components'
 import brainLogo from '../assets/brain2.jpeg'
 
 
-// animations
-const slideOut = keyframes`
-  0%{
-    left: 0%;
-    opacity: 1;
-    width: 375px;
-  }
-  50%{
-    left: -15%;
-    opacity: .5;
-    width: 455px;
-  }
-  100%{
-    left: -30%;
-    opacity: 0;
-    width: 575px;
-  }
-`
-
-
 const HeaderTag = styled.header`
   display: flex;
   justify-content: center;
@@ -37,9 +17,15 @@ const Lnk = styled(Link)`
 const Section = styled.section`
   text-align: center;
   position: relative;
+  left: 0%;
+  opacity: 1;
+  width: 375px;
+  transition: all 1s linear;
 
   &:hover{
-    animation: ${slideOut} 1s linear 0s forwards;
+    left: -30%;
+    opacity: 0;
+    width: 575px;
   }
 `
 const Logo = styled.img`
