@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import SocialMedias from './SocialMedias'
 
+import arrow from '../assets/arrow.svg'
+
 const Foot = styled.footer`
   display: flex;
   align-items: center;
@@ -13,9 +15,19 @@ const Foot = styled.footer`
   letter-spacing: 3px;
   height: 100px;
 `
-export default function Footer() {
+const Arrow = styled.img`
+  opacity: .75;
+  position: fixed;
+  bottom: 5%;
+`
+
+export default function Footer({ arrowHead }) {
+
+
+
   return (
     <Foot>
+      {arrowHead ? <Arrow src={arrow} alt="up-arrow" /> : null}
       <h5>&#169; by Ashlea A. Morgan</h5>
       <SocialMedias />
     </Foot>

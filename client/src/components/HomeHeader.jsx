@@ -41,7 +41,6 @@ const Titles = styled.section`
   font-size: 40px;
   font-weight: 700;
   line-height: 2em;
-  // color: rgb(233,115,40);
   color: rgb(14,24,84)
 `
 const Title = styled.h2`
@@ -87,7 +86,7 @@ const Image = styled.img`
   width: 50%;
 `
 
-export default function HomeHeader() {
+export default function HomeHeader({setArrow}) {
   return (
     <>
       <Main>
@@ -104,13 +103,13 @@ export default function HomeHeader() {
       </Main>
       <NavBar>
         <BtnSection>
-          <a href='#work'>
+          <a href='#work' onClick={()=> setArrow(true)}>
             <Btn>What I Do</Btn>
           </a>
           <a href="https://mango-mosaic.netlify.app/blog" target='_blank' rel="noopener noreferrer">
             <Btn>Blog</Btn>
           </a>
-          <a href='#contact'>
+          <a href='#contact' onClick={()=> setArrow(true)}>
             <Btn>Contact Me</Btn>
           </a>
         </BtnSection>
