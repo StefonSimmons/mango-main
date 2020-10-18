@@ -49,7 +49,7 @@ export default function Header() {
 
 
   return (
-    <HeaderTag>
+    <HeaderTag id='top'>
       <Lnk to='/'>
         <Section className='container'>
           <Logo src={brainLogo} alt="brain-logo" />

@@ -29,7 +29,7 @@ function App() {
         <Writing />
       </Route>
 
-      <Footer arrowHead={arrow}/>
+      <Footer arrowHead={arrow} setArrow={setArrow}/>
     </div>
   );
 }
