@@ -2,17 +2,17 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import brainLogo from '../assets/brain2.jpeg'
+import brainLogo from '../assets/brain3.png'
 
 
 const HeaderTag = styled.header`
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  background-color: rgb(14,24,84);
 `
 const Lnk = styled(Link)`
   text-decoration: none;
-  color: black;
+  color: white
 `
 const Section = styled.section`
   text-align: center;

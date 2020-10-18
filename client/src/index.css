@@ -19,7 +19,7 @@ code {
 /* home navigation animation */
 .container:hover + #home{
   pointer-events: none;
-  animation: slideIn 2s linear .1s 2 alternate forwards
+  animation: slideIn 2s linear .1s 2 alternate forwards;
 }
 
 @keyframes slideIn{
@@ -31,17 +31,17 @@ code {
   50%{
     left: 42.33%;
     visibility: visible;
-    opacity: 1
+    opacity: 1;
   }
   75%{
     left: 42.33%;
     visibility: visible;
-    opacity: 1
+    opacity: 1;
   }
   100%{
     left: 42.33%;
     visibility: visible;
-    opacity: 1
+    opacity: 1;
   }
 }
 

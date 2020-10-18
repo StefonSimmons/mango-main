@@ -6,7 +6,22 @@ import outreachImg from '../assets/outreach.png'
 import writingImg from '../assets/writing.png'
 import researchImg from '../assets/research.png'
 
-
+const HeaderBar = styled.div`
+  height: 100px;
+  width: 100vw;
+  padding: 20px 0;
+  background-color: rgb(14,24,84);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: solid rgb(59,150,201) 10px;
+`
+const HeaderTitle = styled.h2`
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  color: rgb(233,115,40);
+`
 const WorkContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -28,7 +43,7 @@ const Box = styled.div`
   font-family: 'Manrope', sans-serif;
   font-weight: 700;
 `
-const Title = styled.h2`
+const Title = styled.h3`
   color: rgb(233,115,40);
   background: rgba(14,24,84,.2);
   box-shadow: 2px 2px 10px 5px rgba(14,24,84,.20);
@@ -107,8 +122,13 @@ export default function WhatIDo() {
   })
 
   return (
-    <WorkContainer id='work'>
-      {iDo}
-    </WorkContainer>
+    <>
+      <HeaderBar id='work'>
+        <HeaderTitle>What I Do</HeaderTitle>
+      </HeaderBar>
+      <WorkContainer >
+        {iDo}
+      </WorkContainer>
+    </>
   )
 }
