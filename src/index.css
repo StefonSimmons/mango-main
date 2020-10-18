@@ -10,10 +10,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.container:hover + #home{
+  pointer-events: none;
+  animation: slideIn 1s linear 0s forwards
+}
+
+@keyframes slideIn{
+  from{
+    left: 70%;
+    visibility: hidden
+  }
+  to{
+    left: 42.33%;
+    visibility: visible;
+  }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope')

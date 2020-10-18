@@ -4,32 +4,26 @@ import styled, { keyframes } from 'styled-components'
 
 import brainLogo from '../assets/brain2.jpeg'
 
+
 // animations
-const phase = keyframes`
-  0%{ 
-    left:0% 
+const slideOut = keyframes`
+  0%{
+    left: 0%;
+    opacity: 1;
+    width: 375px;
   }
-  25%{ 
-    left:-1% 
+  50%{
+    left: -15%;
+    opacity: .5;
+    width: 455px;
   }
-  50%{ 
-    left:0% 
-  }
-  75%{ 
-    left:1% 
-  }
-  100%{ 
-    left:0% 
-  }
-`
-const fadeOut = keyframes`
-  from{
-    opacity:1
-  }
-  to{
-    opacity:0
+  100%{
+    left: -30%;
+    opacity: 0;
+    width: 575px;
   }
 `
+
 
 const HeaderTag = styled.header`
   display: flex;
@@ -39,36 +33,43 @@ const HeaderTag = styled.header`
 const Lnk = styled(Link)`
   text-decoration: none;
   color: black;
-  position: relative;
-
-  &:hover{
-    animation: ${phase} .1s linear infinite;
-  }
 `
 const Section = styled.section`
   text-align: center;
-  font-family: 'Manrope', sans-serif;
-  font-size: 28px;
-  letter-spacing: 2px;
-  font-weight: 700;
+  position: relative;
 
   &:hover{
-    animation: ${fadeOut} 1.5s linear;
+    animation: ${slideOut} 1s linear 0s forwards;
   }
 `
 const Logo = styled.img`
   margin: 10px 0
 `
-
+const Title = styled.h1`
+  font-family: 'Manrope', sans-serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  font-weight: 700;
+`
+const HomeTitle = styled(Title)`
+  position: relative;
+  bottom: 33.33%;
+  left: 33.33%;
+  visibility: hidden;
+`
 
 export default function Header() {
+
+
+
   return (
     <HeaderTag>
       <Lnk to='/'>
-        <Section>
+        <Section className='container'>
           <Logo src={brainLogo} alt="brain-logo" />
-          <h1>Ashlea A. Morgan</h1>
+          <Title>Ashlea A. Morgan</Title>
         </Section>
+        <HomeTitle id="home">Home</HomeTitle>
       </Lnk>
     </HeaderTag>
 

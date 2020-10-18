@@ -1,5 +1,4 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
 import styled, { keyframes } from 'styled-components'
 
 import ashlea from '../assets/ashlea1.png'
@@ -69,9 +68,6 @@ const Image = styled.img`
 `
 
 export default function HomeHeader() {
-
-  const location = useLocation()
-  console.log(location.hash)
   return (
     <Main>
       <LeftArea>
