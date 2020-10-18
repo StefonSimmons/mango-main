@@ -48,9 +48,10 @@ const Btn = styled.button`
 
   &:hover{
     box-shadow: 5px 5px 0px rgb(233,115,40);
-    background-color: rgba(255,135,60,.4);
+    background-color: rgba(255,135,60,1);
     transform: scale(1.05);
     border: rgba(255,135,60,.1) 1px solid;
+    color: black
 
   }
 
