@@ -41,7 +41,7 @@ export default function Writing() {
         <Title>Writing</Title>
       </Background>
       <WritingSection>
-        <Articles articleData={articleData}/>
+        <Articles articleData={articleData} />
       </WritingSection>
     </div>
   )

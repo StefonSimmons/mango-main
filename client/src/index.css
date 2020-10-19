@@ -29,17 +29,17 @@ code {
     opacity: 0;
   }
   50%{
-    left: 45%;
+    left: 43%;
     visibility: visible;
     opacity: 1;
   }
   75%{
-    left: 45%;
+    left: 43%;
     visibility: visible;
     opacity: 1;
   }
   100%{
-    left: 45%;
+    left: 43%;
     visibility: visible;
     opacity: 1;
   }
