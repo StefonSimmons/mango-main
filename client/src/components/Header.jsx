@@ -1,18 +1,36 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
+
 import styled from 'styled-components'
 
 import brainLogo from '../assets/brain3.png'
-
+import arrow from '../assets/arrow.svg'
 
 const HeaderTag = styled.header`
   display: flex;
-  justify-content: center;
   background-color: rgb(14,24,84);
-  padding-bottom: 10px
+  padding: 0 50px 5px 50px
+`
+const Back = styled.div`
+  display: flex;
+  flex-basis: 39%;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  color: rgb(233,115,40);
+`
+const Arrow = styled.img`
+  width: 60px;
+  margin: 0 20px
+`
+const BackText = styled.h4`
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
 `
 const Lnk = styled.a`
   text-decoration: none;
-  color: white
+  color: white;
+  flex-basis: 60%;
 `
 const Section = styled.section`
   text-align: center;
@@ -40,16 +58,20 @@ const Title = styled.h1`
 const HomeTitle = styled(Title)`
   position: relative;
   bottom: 33.33%;
-  left: 33.33%;
+  left: 14%;
   visibility: hidden;
 `
 
 export default function Header() {
 
-
+  const history = useHistory()
 
   return (
     <HeaderTag id='top'>
+      <Back onClick={() => history.goBack()}>
+        <Arrow src={arrow} alt='left-arrow' />
+        <BackText>What I Do</BackText>
+      </Back>
       <Lnk href='/'>
         <Section className='container'>
           <Logo src={brainLogo} alt="brain-logo" />
