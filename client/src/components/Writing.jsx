@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react'
+import Articles from './Articles'
+
 import writing from '../assets/writing.png'
 
 import styled from 'styled-components'
+
 
 const Background = styled.div`
   background-image: url(${writing});
@@ -22,7 +25,7 @@ const Title = styled.h1`
 `
 const WritingSection = styled.section`
   background-color: rgb(233,115,40);
-  height: 100vh
+  height: 100%;
 `
 
 export default function Writing() {
@@ -30,6 +33,8 @@ export default function Writing() {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  
   
   return (
     <div>
@@ -37,7 +42,7 @@ export default function Writing() {
         <Title>Writing</Title>
       </Background>
       <WritingSection>
-
+        <Articles/>
       </WritingSection>
     </div>
   )

@@ -7,7 +7,7 @@ import WhatIDo from './components/WhatIDo'
 import ContactMe from './components/ContactMe'
 import Footer from './components/Footer'
 import Writing from './components/Writing'
-
+import Research from './components/Research'
 
 function App() {
 
@@ -27,6 +27,11 @@ function App() {
         <Writing />
       </Route>
 
+      <Route path='/research'>
+        <Research />
+      </Route>
+
+      
       <Footer />
     </div>
   );

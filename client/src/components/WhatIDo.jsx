@@ -113,7 +113,7 @@ export default function WhatIDo() {
       <Work style={work.style}>
         <Box>
           <Title>{formatedText}</Title>
-          <Link to='/writing'>
+          <Link to={`/${work.text}`}>
             <Btn>Go to</Btn>
           </Link>
         </Box>

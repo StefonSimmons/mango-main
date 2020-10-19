@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import brainLogo from '../assets/brain3.png'
@@ -11,7 +10,7 @@ const HeaderTag = styled.header`
   background-color: rgb(14,24,84);
   padding-bottom: 10px
 `
-const Lnk = styled(Link)`
+const Lnk = styled.a`
   text-decoration: none;
   color: white
 `
@@ -51,7 +50,7 @@ export default function Header() {
 
   return (
     <HeaderTag id='top'>
-      <Lnk to='/'>
+      <Lnk href='/'>
         <Section className='container'>
           <Logo src={brainLogo} alt="brain-logo" />
           <Title>Ashlea A. Morgan</Title>
