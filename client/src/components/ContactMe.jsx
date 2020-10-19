@@ -1,5 +1,6 @@
 import React from 'react'
-import ashlea from '../assets/ashlea-contact.png'
+import ashlea from '../assets/ashlea-contact.WebP'
+
 import styled from 'styled-components'
 import { HeaderBar, HeaderTitle } from './WhatIDo'
 

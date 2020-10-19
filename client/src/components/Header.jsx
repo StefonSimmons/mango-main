@@ -96,9 +96,9 @@ export default function Header() {
       name: 'Outreach'
     }
   ]
-
+  
   const goTo = paths.filter(path => path.path !== location.pathname)
-  console.log(goTo)
+
   return (
     <HeaderTag id='top'>
       <Back onClick={() => history.goBack()}

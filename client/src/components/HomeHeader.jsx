@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 
-import ashlea from '../assets/ashlea1.png'
+import ashlea from '../assets/ashlea1.WebP'
 
 // animations
 export const fadeIn = keyframes`

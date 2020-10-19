@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import outreachImg from '../assets/outreach.png'
-import writingImg from '../assets/writing.png'
-import researchImg from '../assets/research.png'
+import outreachImg from '../assets/outreach.WebP'
+import writingImg from '../assets/writing.WebP'
+import researchImg from '../assets/research.WebP'
 
 export const HeaderBar = styled.div`
   height: 75px;

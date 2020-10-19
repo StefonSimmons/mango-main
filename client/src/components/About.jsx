@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {fadeIn} from '../components/HomeHeader'
-import city from '../assets/city.jpg'
+import city from '../assets/city.WebP'
 
 const BackgroundImage = styled.div`
   background-image: url(${city});

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import Articles from './Articles'
 import { articleData } from '../data/data.js'
 
-import writing from '../assets/writing.png'
+import writing from '../assets/writing.WebP'
 
 import styled from 'styled-components'
 
