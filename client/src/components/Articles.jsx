@@ -1,5 +1,4 @@
 import React from 'react'
-import { articleData } from '../data/data.js'
 
 import styled from 'styled-components'
 
@@ -53,7 +52,7 @@ const Btn = styled.button`
   }
 `
 
-export default function Articles() {
+export default function Articles({ articleData }) {
 
   const articles = articleData.map((article, idx) => {
     const rowReverse = {
@@ -66,7 +65,10 @@ export default function Articles() {
           <Title>{article.title}</Title>
           <Description>{article.description}</Description>
           <a href={article.url} target='_blank' rel="noopener noreferrer">
-            <Btn>Read More</Btn>
+            {article.url.includes('facebook') ?
+              <Btn>Watch Here</Btn>
+              :
+              <Btn>Read More</Btn>}
           </a>
         </Details>
       </Article>

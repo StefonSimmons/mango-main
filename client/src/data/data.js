@@ -4,6 +4,9 @@ import article3 from '../assets/article3.png'
 import article4 from '../assets/article4.png'
 import article5 from '../assets/article5.png'
 
+import outreach1 from '../assets/late-night-science.png'
+import outreach2 from '../assets/sci-sub.png'
+import outreach3 from '../assets/ashlea-helen.jpg'
 
 export const articleData = [
   {
@@ -59,4 +62,25 @@ export const currentResearch = [
   'Nerve cells use chemical signals called neurotransmitters(e.g.serotonin) to communicate.Serotonin is well - known for its role in depression but is used to communicate throughout the gut and brain, including the medial prefrontal cortex.This area of the brain is vital for higher - order functions like anticipating, decision making, regulating emotion, and thinking flexibly.',
 
   'I study how serotonin signaling in a region of the medial prefrontal cortex is driving emotional regulation and cognitive flexibility, thus altering behavior.'
+]
+
+export const outreachData = [
+  {
+    title: 'VP & Coordinator',
+    description: 'Late Night Science (LNS) is a seminar series held monthly by Columbia University Neuroscience Outreach (CUNO). Each month a graduate student or postdoc fellow discusses their scientific research with a non-scientific audience. Talks are always followed by a lab tour. Events are posted here.',
+    image: outreach1,
+    url: 'https://cuno.zuckermaninstitute.columbia.edu/directory/ashlea-ariel-morgan'
+  },
+  {
+    title: 'Co-founder, EIC, & writer',
+    description: 'Scientist on the Subway (SciSub) is a blog dedicated to highlighting the trajectories that lead scientists to where they are now, touching on both the challenges and triumphs. We show learners of all ages that scientists come from many backgrounds and can be at different stages of their scientific career.',
+    image: outreach2,
+    url: 'https://scisub.com/our-team/'
+  },
+  {
+    title: 'Neuroscience & Jazz: Hearing Harmony with Helen Sung feat. Ashlea Morgan',
+    description: 'Hearing Harmony brings together jazz music and science as we celebrate the way that music affects our brains and bodies. Each month they explore a different topic with a guest scientist from Columbia University, combined with music from New York based and inaugural Zuckerman Institute Jazz Artist-in-Residence pianist Helen Sung.',
+    image: outreach3,
+    url: 'https://www.facebook.com/watch/live/?v=4187413297967316&ref=watch_permalink'
+  }
 ]

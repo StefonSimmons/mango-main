@@ -59,7 +59,7 @@ const Title = styled.h1`
 const HomeTitle = styled(Title)`
   position: relative;
   bottom: 33.33%;
-  left: 14%;
+  left: 38%;
   visibility: hidden;
 `
 
@@ -67,7 +67,6 @@ export default function Header() {
 
   const history = useHistory()
   const location = useLocation()
-  console.log(location.pathname)
   return (
     <HeaderTag id='top'>
       <Back onClick={() => history.goBack()}

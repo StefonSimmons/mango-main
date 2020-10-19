@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import Articles from './Articles'
+import { articleData } from '../data/data.js'
 
 import writing from '../assets/writing.png'
 
@@ -23,7 +24,7 @@ export const Title = styled.h1`
   letter-spacing: 4px;
   color: white;
 `
-const WritingSection = styled.section`
+export const WritingSection = styled.section`
   background-color: rgb(233,115,40);
   height: 100%;
 `
@@ -40,7 +41,7 @@ export default function Writing() {
         <Title>Writing</Title>
       </Background>
       <WritingSection>
-        <Articles/>
+        <Articles articleData={articleData}/>
       </WritingSection>
     </div>
   )

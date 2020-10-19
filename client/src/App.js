@@ -8,6 +8,8 @@ import ContactMe from './components/ContactMe'
 import Footer from './components/Footer'
 import Writing from './components/Writing'
 import Research from './components/Research'
+import Outreach from './components/Outreach'
+
 
 function App() {
 
@@ -29,6 +31,10 @@ function App() {
 
       <Route path='/research'>
         <Research />
+      </Route>
+
+      <Route path='/outreach'>
+        <Outreach />
       </Route>
 
       
