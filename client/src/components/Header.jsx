@@ -1,5 +1,5 @@
 import React from 'react'
-import { useHistory, useLocation } from 'react-router-dom'
+import { useHistory, useLocation, Link } from 'react-router-dom'
 
 import styled from 'styled-components'
 
@@ -9,19 +9,17 @@ import arrow from '../assets/arrow.svg'
 
 const HeaderTag = styled.header`
   display: flex;
+  justify-content: space-between;
   background-color: rgb(14,24,84);
   padding: 0 50px 5px 50px
 `
 const Back = styled.div`
   display: flex;
-  flex-basis: 39%;
   align-items: center;
-  text-decoration: none;
   cursor: pointer;
   color: rgb(233,115,40);
-
 `
-const Arrow = styled.img`
+const BackArrow = styled.img`
   width: 60px;
   margin: 0 20px
 `
@@ -62,19 +60,54 @@ const HomeTitle = styled(Title)`
   left: 38%;
   visibility: hidden;
 `
+const Forward = styled(Back)`
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  cursor: auto;
+`
+const Group = styled(Link)`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(233,115,40);
+`
+const ForwardText = styled(BackText)`
+`
+const ForwardArrow = styled(BackArrow)`
+  transform: rotateY(180deg)
+`
 
 export default function Header() {
 
   const history = useHistory()
   const location = useLocation()
+
+  const paths = [
+    {
+      path: '/research',
+      name: 'Research'
+    }, {
+      path: '/writing',
+      name: 'Writing'
+    }, {
+      path: '/outreach',
+      name: 'Outreach'
+    }
+  ]
+
+  const goTo = paths.filter(path => path.path !== location.pathname)
+  console.log(goTo)
   return (
     <HeaderTag id='top'>
       <Back onClick={() => history.goBack()}
         style={location.pathname === '/' ? { visibility: 'hidden' } : { visibility: 'visible' }}
       >
-        <Arrow src={arrow} alt='left-arrow' />
+        <BackArrow src={arrow} alt='left-arrow' />
         <BackText>What I Do</BackText>
       </Back>
+
       <Lnk href='/'>
         <Section className='container'>
           <Logo src={brainLogo} alt="brain-logo" />
@@ -82,6 +115,18 @@ export default function Header() {
         </Section>
         <HomeTitle id="home">Home</HomeTitle>
       </Lnk>
+
+      <Forward style={location.pathname === '/' ? { visibility: 'hidden' } : { visibility: 'visible' }}>
+        <Group to={goTo[0].path}>
+          <ForwardText>{goTo[0].name}</ForwardText>
+          <ForwardArrow src={arrow} alt='right-arrow' />
+        </Group>
+
+        <Group to={goTo[1].path}>
+          <ForwardText>{goTo[1].name}</ForwardText>
+          <ForwardArrow src={arrow} alt='right-arrow' />
+        </Group>
+      </Forward>
     </HeaderTag>
 
   )
