@@ -14,8 +14,6 @@ export const HeaderBar = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  // border-top: solid rgb(59,150,201) 10px;
-  // border-top: solid rgb(222,196,94) 10px;
 `
 export const HeaderTitle = styled.h2`
   text-align: center;
@@ -47,9 +45,7 @@ const Box = styled.div`
 `
 const Title = styled.h3`
   color: rgb(14,24,84);
-  // color: rgba(233,115,40,.9);
   background: rgba(233,115,40,.9);
-  // background: rgb(14,24,84);
   box-shadow: 0px 0px 10px 5px rgba(14,24,84,.2);
   border-radius: 5px;
   padding: 5px 20px;

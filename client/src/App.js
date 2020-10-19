@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Route } from 'react-router-dom'
 import Header from './components/Header'
 import HomeHeader from './components/HomeHeader'
@@ -11,15 +11,13 @@ import Writing from './components/Writing'
 
 function App() {
 
-  const [arrow, setArrow] = useState(false)
-
 
   return (
     <div>
       <Header />
 
       <Route exact path='/'>
-        <HomeHeader setArrow={setArrow}/>
+        <HomeHeader />
         <About />
         <WhatIDo />
         <ContactMe />
@@ -29,7 +27,7 @@ function App() {
         <Writing />
       </Route>
 
-      <Footer arrowHead={arrow} setArrow={setArrow}/>
+      <Footer />
     </div>
   );
 }

@@ -2,7 +2,6 @@ import React from 'react'
 import ashlea from '../assets/ashlea-contact.png'
 import styled from 'styled-components'
 import { HeaderBar, HeaderTitle } from './WhatIDo'
-// import { AboutTitle } from './About'
 
 const Bar = styled(HeaderBar)`
   border-top: solid rgba(222,196,94,0) 10px;
@@ -98,7 +97,6 @@ export default function ContactMe() {
       </Bar>
       <ContactSection>
         <Form onSubmit={''}>
-          {/* <Title>Contact Me</Title> */}
           <Input type="text" className='input' placeholder='Name' />
           <Input type="text" className='input' placeholder='Email' />
           <Input type="text" className='input' placeholder='Subject' />

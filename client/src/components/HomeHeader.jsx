@@ -54,8 +54,6 @@ const NavBar = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-  // border-bottom: solid rgb(59,150,201) 10px;
-  // border-bottom: solid rgb(222,196,94) 10px;
 `
 const BtnSection = styled.section`
   display: flex;
@@ -87,7 +85,7 @@ const Image = styled.img`
   width: 50%;
 `
 
-export default function HomeHeader({setArrow}) {
+export default function HomeHeader() {
   return (
     <>
       <Main>
@@ -104,13 +102,13 @@ export default function HomeHeader({setArrow}) {
       </Main>
       <NavBar>
         <BtnSection>
-          <a href='#work' onClick={()=> setArrow(true)}>
+          <a href='#work'>
             <Btn>What I Do</Btn>
           </a>
           <a href="https://mango-mosaic.netlify.app/blog" target='_blank' rel="noopener noreferrer">
             <Btn>Blog</Btn>
           </a>
-          <a href='#contact' onClick={()=> setArrow(true)}>
+          <a href='#contact'>
             <Btn>Contact Me</Btn>
           </a>
         </BtnSection>
