@@ -1,10 +1,11 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
+import { useHistory, useLocation } from 'react-router-dom'
 
 import styled from 'styled-components'
 
 import brainLogo from '../assets/brain3.png'
 import arrow from '../assets/arrow.svg'
+
 
 const HeaderTag = styled.header`
   display: flex;
@@ -18,6 +19,7 @@ const Back = styled.div`
   text-decoration: none;
   cursor: pointer;
   color: rgb(233,115,40);
+
 `
 const Arrow = styled.img`
   width: 60px;
@@ -65,10 +67,13 @@ const HomeTitle = styled(Title)`
 export default function Header() {
 
   const history = useHistory()
-
+  const location = useLocation()
+  console.log(location.pathname)
   return (
     <HeaderTag id='top'>
-      <Back onClick={() => history.goBack()}>
+      <Back onClick={() => history.goBack()}
+        style={location.pathname === '/' ? { visibility: 'hidden' } : { visibility: 'visible' }}
+      >
         <Arrow src={arrow} alt='left-arrow' />
         <BackText>What I Do</BackText>
       </Back>
