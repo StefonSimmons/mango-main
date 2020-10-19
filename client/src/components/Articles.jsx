@@ -8,18 +8,18 @@ const ArticlesSection = styled.div`
   align-items: center;
 `
 const Article = styled.article`
-  display: flex; 
-  padding: 50px
+  display: flex;
+  align-items: center;
+  padding: 50px;
 `
 const Image = styled.img`
   width: 100%;
-
 `
 const Details = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin: 40px;
   font-family: 'Manrope', sans-serif;
   color: white;
@@ -31,6 +31,9 @@ const Title = styled.h2`
 const Description = styled.p`
   font-size: 24px;
   margin: 50px 0
+`
+const BtnLnk = styled.a`
+  align-self: center;
 `
 const Btn = styled.button`
   padding: 10px 5px;
@@ -64,12 +67,12 @@ export default function Articles({ articleData }) {
         <Details>
           <Title>{article.title}</Title>
           <Description>{article.description}</Description>
-          <a href={article.url} target='_blank' rel="noopener noreferrer">
+          <BtnLnk href={article.url} target='_blank' rel="noopener noreferrer">
             {article.url.includes('facebook') ?
               <Btn>Watch Here</Btn>
               :
               <Btn>Read More</Btn>}
-          </a>
+          </BtnLnk>
         </Details>
       </Article>
     )
