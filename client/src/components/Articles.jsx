@@ -10,7 +10,6 @@ const ArticlesSection = styled.div`
 `
 const Article = styled.article`
   display: flex; 
-  // border: green solid 1px;
   padding: 50px
 `
 const Image = styled.img`
@@ -18,7 +17,6 @@ const Image = styled.img`
 
 `
 const Details = styled.section`
-  // border: green solid 1px;
   display: flex;
   flex-direction: column;
   justify-content: center;

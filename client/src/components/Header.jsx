@@ -32,7 +32,6 @@ const BackText = styled.h4`
 const Lnk = styled.a`
   text-decoration: none;
   color: white;
-  flex-basis: 60%;
 `
 const Section = styled.section`
   text-align: center;

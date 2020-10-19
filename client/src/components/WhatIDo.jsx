@@ -53,7 +53,7 @@ const Title = styled.h3`
   letter-spacing: 5px;
   font-size: 36px;
 `
-const Btn = styled.button`
+export const Btn = styled.button`
   background-color: rgba(0,0,0,0);
   color: white;
   font-size: 24px;

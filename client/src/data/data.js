@@ -39,3 +39,24 @@ export const articleData = [
 
 ]
 
+export const researchData = [
+  {
+    publication: 'Teixeira CM, Rosen ZB, Suri D, Sun Q, Hersh M, Sargin D, Dincheva I, Morgan AA, Spivack S, Krok AC, Hirschfeld-Stoler T. Hippocampal 5-HT input regulates memory formation and Schaffer collateral excitation. Neuron. 2018 Jun 6;98(5):992-1004.',
+    url: 'https://pubmed.ncbi.nlm.nih.gov/29754752/'
+  },
+  {
+    publication: 'LaGamma CT, Tang WW, Morgan AA, McGowan JC, Brachman RA, Denny CA. Antidepressant but not prophylactic ketamine administration alters calretinin and calbindin expression in the ventral hippocampus. Frontiers in molecular neuroscience. 2018 Nov 6;11:404.',
+    url: 'https://pubmed.ncbi.nlm.nih.gov/30459554/'
+  },
+  {
+    publication: 'Katagiri Y, Morgan AA, Yu P, Bangayan NJ, Junka R, Geller HM. Identification of novel binding sites for heparin in receptor protein-tyrosine phosphatase (RPTPσ): Implications for proteoglycan signaling. Journal of Biological Chemistry. 2018 Jul 20;293(29):11639-47.',
+    url: 'https://pubmed.ncbi.nlm.nih.gov/29880643/'
+  }
+]
+export const currentResearch = [
+  'We are constantly updating information from our worlds - both within and outside of us. As our environment changes, we use this information to adapt. But, how?',
+
+  'Nerve cells use chemical signals called neurotransmitters(e.g.serotonin) to communicate.Serotonin is well - known for its role in depression but is used to communicate throughout the gut and brain, including the medial prefrontal cortex.This area of the brain is vital for higher - order functions like anticipating, decision making, regulating emotion, and thinking flexibly.',
+
+  'I study how serotonin signaling in a region of the medial prefrontal cortex is driving emotional regulation and cognitive flexibility, thus altering behavior.'
+]

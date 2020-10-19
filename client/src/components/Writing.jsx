@@ -6,7 +6,7 @@ import writing from '../assets/writing.png'
 import styled from 'styled-components'
 
 
-const Background = styled.div`
+export const Background = styled.div`
   background-image: url(${writing});
   background-size: cover;
   background-position: center;
@@ -16,7 +16,7 @@ const Background = styled.div`
   align-items: center;
   padding: 0px 200px
 `
-const Title = styled.h1`
+export const Title = styled.h1`
   font-family: 'Manrope', sans-serif;
   font-weight: 700;
   font-size: 48px;
@@ -34,8 +34,6 @@ export default function Writing() {
     window.scrollTo(0, 0)
   }, [])
 
-  
-  
   return (
     <div>
       <Background>
