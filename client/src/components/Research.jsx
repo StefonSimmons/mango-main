@@ -35,6 +35,11 @@ const ResearchSection = styled.section`
   background-color: rgb(14,24,84);
   padding: 40px 0;
 `
+const TitleP = styled(Title)`
+  color: rgb(233,115,40);
+  text-align: center;
+  margin-top: 20px
+`
 
 export default function Research() {
 
@@ -59,6 +64,7 @@ export default function Research() {
         </CurrentResearch>
       </BackgroundImage>
       <ResearchSection>
+        <TitleP>Published Papers</TitleP>
         <ResearchArticles />
       </ResearchSection>
     </div>

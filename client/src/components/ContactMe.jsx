@@ -187,7 +187,7 @@ export default function ContactMe() {
           {sent.msg === 'success' ?
             <ThankYouMsg>Thanks for the Message!</ThankYouMsg>
             :
-            <SendBtn type="submit" value="Send!" />
+            <SendBtn type="submit" value="Send" />
           }
         </Form>
         <Image src={ashlea} alt="" />

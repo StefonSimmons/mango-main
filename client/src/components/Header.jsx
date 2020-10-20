@@ -105,7 +105,7 @@ export default function Header() {
         style={location.pathname === '/' ? { visibility: 'hidden' } : { visibility: 'visible' }}
       >
         <BackArrow src={arrow} alt='left-arrow' />
-        <BackText>What I Do</BackText>
+        <BackText>Back</BackText>
       </Back>
 
       <Lnk href='/'>

@@ -21,7 +21,8 @@ export default function Footer() {
 
   return (
     <Foot>
-      <h4>&#169; by Ashlea A. Morgan</h4>
+      <h4>&#169; by Ashlea A. Morgan </h4>
+      <h4>Crafted by Stefon Simmons</h4>
       <SocialMedias />
     </Foot>
   )
