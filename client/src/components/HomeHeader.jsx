@@ -67,8 +67,8 @@ const BtnSection = styled.section`
 const Btn = styled.button`
   padding: 12px;
   width: 200px;
-  background-color: rgba(233,115,40, 0);
-  color: white;
+  background-color: ${orange};
+  color: ${blue};
   border: ${orange} solid 1px;
   transition: all .3s ease-in-out;
   font-size: 24px;

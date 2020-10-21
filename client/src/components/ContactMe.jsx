@@ -3,14 +3,14 @@ import { sendEmail } from '../services/sendEmail'
 import ashlea from '../assets/ashlea-contact.WebP'
 
 import styled, { keyframes } from 'styled-components'
-import { blue, orange } from './style-themes/style-themes'
+import { blue, orange, offWhite } from './style-themes/style-themes'
 
 import { HeaderBar, HeaderTitle } from './WhatIDo'
 
 const flashIn = keyframes`
   from{
-    box-shadow: 5px 5px 0px rgb(235,235,235);
-    background-color: rgb(235,235,235);
+    box-shadow: 5px 5px 0px ${offWhite};
+    background-color: ${offWhite};
   }
   to{
     box-shadow: 5px 5px 0px ${blue};
@@ -58,7 +58,7 @@ const Input = styled.input`
   letter-spacing: 2px;
   padding: 0 20px;
   margin: 8px 0;
-  background: rgba(0,0,0,0);
+  background: ${orange};
   border: ${blue} solid 1px;
   color: ${blue};
 
@@ -75,7 +75,7 @@ font-weight: 700;
 letter-spacing: 2px;
 padding: 20px;
 margin: 8px 0;
-background: rgba(0,0,0,0);
+background: ${orange};
 border: ${blue} solid 1px;
 color: ${blue};
 
@@ -89,7 +89,7 @@ const SendBtn = styled.input`
   width: 150px;
   height: 60px;
   border: ${blue} 1px solid;
-  background-color: rgba(255,255,255);
+  background-color: white;
   color: ${blue};
   font-family: 'Manrope', sans-serif;
   font-size: 20px;
@@ -99,7 +99,7 @@ const SendBtn = styled.input`
   &:hover{
     transform: scale(1.05);
     box-shadow: 5px 5px 0px ${blue};
-    background-color: rgb(235,235,235);
+    background-color: ${offWhite};
     font-weight: 700
   }
 `
@@ -107,7 +107,7 @@ const ThankYouMsg = styled.h4`
   padding: 18px;
   font-size: 24px;
   letter-spacing: 3px;
-  color: rgb(235,235,235);
+  color: ${offWhite};
   box-shadow: 5px 5px 0px ${blue};
   background-color: rgb(0,100,0);
   animation: ${flashIn} 1s ease-in-out
