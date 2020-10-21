@@ -3,7 +3,6 @@ import { currentResearch } from '../data/data.js'
 
 import research from '../assets/research2.jpg'
 import styled from 'styled-components'
-import { blue, orange, orangeTrans } from './style-themes/style-themes'
 import { Background, Title } from './Writing'
 
 import ResearchArticles from './ResearchArticles.jsx'
@@ -16,16 +15,16 @@ const BackgroundImage = styled(Background)`
   align-items: flex-start 
 `
 const TitleR = styled(Title)`
-  color: ${blue};
+  color: ${({ theme }) => theme.blue};
 `
 const CurrentResearch = styled.div`
-  background-color: ${orangeTrans};
+  background-color: ${({ theme }) => theme.orangeTrans};
   font-family: 'Manrope', sans-serif;
   color: white;
   line-height: 1.75;
   font-size: 24px;
   font-weight: 700;
-  color: ${blue};
+  color: ${({ theme }) => theme.blue};
   border-radius: 5px;
   margin: 15px 0;
 `
@@ -34,11 +33,11 @@ const Paragraph = styled.p`
   letter-spacing: 1.75px
 `
 const ResearchSection = styled.section`
-  background-color: ${blue};
+  background-color: ${({ theme }) => theme.blue};
   padding: 40px 0;
 `
 const TitleP = styled(Title)`
-  color: ${orange};
+  color: ${({theme})=> theme.orange};
   text-align: center;
   margin-top: 20px
 `

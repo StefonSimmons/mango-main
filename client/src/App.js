@@ -9,36 +9,38 @@ import Footer from './components/Footer'
 import Writing from './components/Writing'
 import Research from './components/Research'
 import Outreach from './components/Outreach'
-
+import ColorThemeProvider from './components/style-themes/ColorThemeProvider'
 
 function App() {
 
 
   return (
     <div>
-      <Header />
+      <ColorThemeProvider>
+        <Header />
 
-      <Route exact path='/'>
-        <HomeHeader />
-        <About />
-        <WhatIDo />
-        <ContactMe />
-      </Route>
+        <Route exact path='/'>
+          <HomeHeader />
+          <About />
+          <WhatIDo />
+          <ContactMe />
+        </Route>
 
-      <Route path='/writing'>
-        <Writing />
-      </Route>
+        <Route path='/writing'>
+          <Writing />
+        </Route>
 
-      <Route path='/research'>
-        <Research />
-      </Route>
+        <Route path='/research'>
+          <Research />
+        </Route>
 
-      <Route path='/outreach'>
-        <Outreach />
-      </Route>
+        <Route path='/outreach'>
+          <Outreach />
+        </Route>
 
-      
-      <Footer />
+
+        <Footer />
+      </ColorThemeProvider>
     </div>
   );
 }

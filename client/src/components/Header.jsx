@@ -2,7 +2,6 @@ import React from 'react'
 import { useHistory, useLocation, Link } from 'react-router-dom'
 
 import styled from 'styled-components'
-import { blue,orange } from './style-themes/style-themes.js'
 
 import brainLogo from '../assets/brain3.svg'
 import arrow from '../assets/arrow.svg'
@@ -11,14 +10,14 @@ import arrow from '../assets/arrow.svg'
 const HeaderTag = styled.header`
   display: flex;
   justify-content: space-between;
-  background-color: ${blue};
+  background-color: ${({theme})=> theme.blue};
   padding: 0 50px 5px 50px
 `
 const Back = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
-  color: ${orange};
+  color: ${({theme})=> theme.orange};
 `
 const BackArrow = styled.img`
   width: 60px;
@@ -72,7 +71,7 @@ const Group = styled(Link)`
   flex-direction: row;
   align-items: center;
   text-decoration: none;
-  color: ${orange};
+  color: ${({theme})=> theme.orange};
 `
 const ForwardText = styled(BackText)`
 `

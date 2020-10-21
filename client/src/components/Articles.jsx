@@ -1,7 +1,6 @@
 import React from 'react'
 
 import styled from 'styled-components'
-import {orange} from './style-themes/style-themes'
 
 const ArticlesSection = styled.div`
   display: flex;
@@ -39,7 +38,7 @@ const BtnLnk = styled.a`
 const Btn = styled.button`
   padding: 10px 5px;
   width: 150px;
-  background-color: ${orange};
+  background-color: ${({theme})=> theme.orange};
   color: white;
   border: white solid 1px;
   transition: all .3s ease-in-out;

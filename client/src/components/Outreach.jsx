@@ -6,7 +6,6 @@ import outreach from '../assets/outreach2.jpg'
 import { Background, Title, WritingSection } from './Writing'
 
 import styled from 'styled-components'
-import { orange } from './style-themes/style-themes'
 
 const BackgroundImage = styled(Background)`
   background-image: url(${outreach});
@@ -16,7 +15,7 @@ const BackgroundImage = styled(Background)`
 `
 
 const TitleR = styled(Title)`
-  color: ${orange}
+  color: ${({theme})=> theme.orange}
 `
 const OutreachSection = styled(WritingSection)`
 `

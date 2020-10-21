@@ -5,7 +5,6 @@ import { articleData } from '../data/data.js'
 import writing from '../assets/writing.WebP'
 
 import styled from 'styled-components'
-import {orange} from './style-themes/style-themes'
 
 export const Background = styled.div`
   background-image: url(${writing});
@@ -25,7 +24,7 @@ export const Title = styled.h1`
   color: white;
 `
 export const WritingSection = styled.section`
-  background-color: ${orange};
+  background-color: ${({theme})=> theme.orange};
   height: 100%;
 `
 

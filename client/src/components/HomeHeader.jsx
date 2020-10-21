@@ -1,6 +1,5 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
-import { blue, orange } from './style-themes/style-themes'
 
 import ashlea from '../assets/ashlea1.WebP'
 
@@ -10,8 +9,8 @@ export const fadeIn = keyframes`
   100%{opactiy: 1}
 `
 const slideIn = keyframes`
-  0%{bottom: -10%; opacity: 0; border-bottom: ${blue} solid 1px}
-  50%{bottom: -5%; opacity: .5; border-bottom: ${blue} solid 1px}
+  0%{bottom: -10%; opacity: 0; border-bottom: ${({theme})=> theme.blue} solid 1px}
+  50%{bottom: -5%; opacity: .5; border-bottom: ${({theme})=> theme.blue} solid 1px}
   100%{bottom: 0%; opacity: 1}
 `
 
@@ -21,7 +20,7 @@ const Main = styled.div`
   justify-content: space-between;
 `
 const LeftArea = styled.div`
-  background-color: ${blue};
+  background-color: ${({theme})=> theme.blue};
   font-family: 'Manrope', sans-serif;
   width: 50%;
   display: flex;
@@ -35,14 +34,14 @@ const Center = styled.section`
   padding: 30px 25px;
   border-radius: 5px;
   left: 20%;
-  background-color: ${orange}
+  background-color: ${({theme})=> theme.orange}
 `
 const Titles = styled.section`
   text-align: left;
   font-size: 40px;
   font-weight: 700;
   line-height: 2em;
-  color: ${blue}
+  color: ${({theme})=> theme.blue}
 `
 const Title = styled.h2`
   animation: ${fadeIn} 1.5s ease-in-out;
@@ -51,7 +50,7 @@ const NavBar = styled.nav`
   height: 100px;
   width: 100vw;
   padding: 20px 0;
-  background-color: ${blue};
+  background-color: ${({theme})=> theme.blue};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,9 +66,9 @@ const BtnSection = styled.section`
 const Btn = styled.button`
   padding: 12px;
   width: 200px;
-  background-color: ${orange};
-  color: ${blue};
-  border: ${orange} solid 1px;
+  background-color: ${({theme})=> theme.orange};
+  color: ${({theme})=> theme.blue};
+  border: ${({theme})=> theme.orange} solid 1px;
   transition: all .3s ease-in-out;
   font-size: 24px;
 
