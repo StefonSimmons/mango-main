@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+
 import styled from 'styled-components'
+import {blue, orange} from './style-themes/style-themes'
 
 import outreachImg from '../assets/outreach.WebP'
 import writingImg from '../assets/writing.WebP'
@@ -10,7 +12,7 @@ export const HeaderBar = styled.div`
   height: 75px;
   width: 100vw;
   padding: 25px 0;
-  background-color: rgb(14,24,84);
+  background-color: ${blue};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,7 +23,7 @@ export const HeaderTitle = styled.h2`
   font-size: 40px;
   font-weight: 700;
   letter-spacing: 5px;
-  color: rgb(233,115,40);
+  color: ${orange};
 `
 const WorkContainer = styled.div`
   display: flex;
@@ -44,7 +46,7 @@ const Box = styled.div`
   font-family: 'Manrope', sans-serif;
 `
 const Title = styled.h3`
-  color: rgb(14,24,84);
+  color: ${blue};
   background: rgba(233,115,40,.9);
   box-shadow: 0px 0px 10px 5px rgba(14,24,84,.2);
   border-radius: 5px;
@@ -57,7 +59,7 @@ export const Btn = styled.button`
   background-color: rgba(0,0,0,0);
   color: white;
   font-size: 24px;
-  border: rgb(233,115,40) 1px solid;
+  border: ${orange} 1px solid;
   padding: 15px 30px;
   transition: all .3s ease-in-out;
   
@@ -65,7 +67,7 @@ export const Btn = styled.button`
     background-color: rgba(255,135,60,1);
     transform: scale(1.05);
     font-weight: 700;
-    box-shadow: 5px 5px 0px rgb(233,115,40);
+    box-shadow: 5px 5px 0px ${orange};
     border: rgba(255,135,60,.1) 1px solid;
     color: black
 

@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import {fadeIn} from '../components/HomeHeader'
+import { fadeIn } from '../components/HomeHeader'
 import city from '../assets/city.WebP'
+import { blue, orangeTrans } from './style-themes/style-themes'
 
 const BackgroundImage = styled.div`
   background-image: url(${city});
@@ -17,7 +18,7 @@ const AboutSection = styled.section`
   font-family: 'Manrope', sans-serif;
 `
 const AboutBox = styled.section`
-  background-color: rgba(233,115,40,.85);
+  background-color: ${orangeTrans};
   height: 66%;
   width: 433px;
   margin: 100px;
@@ -29,7 +30,7 @@ export const AboutTitle = styled.h2`
   text-align: center;
   font-size: 40px;
   font-weight: 700;
-  color: rgb(14,24,84);
+  color: ${blue};
 `
 
 const Description = styled.p`

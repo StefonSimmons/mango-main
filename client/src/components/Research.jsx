@@ -2,8 +2,10 @@ import React, { useEffect } from 'react'
 import { currentResearch } from '../data/data.js'
 
 import research from '../assets/research2.jpg'
-import { Background, Title } from './Writing'
 import styled from 'styled-components'
+import { blue, orange, orangeTrans } from './style-themes/style-themes'
+import { Background, Title } from './Writing'
+
 import ResearchArticles from './ResearchArticles.jsx'
 
 
@@ -14,16 +16,16 @@ const BackgroundImage = styled(Background)`
   align-items: flex-start 
 `
 const TitleR = styled(Title)`
-  color: rgb(14,24,84);
+  color: ${blue};
 `
 const CurrentResearch = styled.div`
-  background-color: rgba(233,115,40,.85);
+  background-color: ${orangeTrans};
   font-family: 'Manrope', sans-serif;
   color: white;
   line-height: 1.75;
   font-size: 24px;
   font-weight: 700;
-  color: rgb(14,24,84);
+  color: ${blue};
   border-radius: 5px;
   margin: 15px 0;
 `
@@ -32,11 +34,11 @@ const Paragraph = styled.p`
   letter-spacing: 1.75px
 `
 const ResearchSection = styled.section`
-  background-color: rgb(14,24,84);
+  background-color: ${blue};
   padding: 40px 0;
 `
 const TitleP = styled(Title)`
-  color: rgb(233,115,40);
+  color: ${orange};
   text-align: center;
   margin-top: 20px
 `

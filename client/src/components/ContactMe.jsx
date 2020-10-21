@@ -3,6 +3,8 @@ import { sendEmail } from '../services/sendEmail'
 import ashlea from '../assets/ashlea-contact.WebP'
 
 import styled, { keyframes } from 'styled-components'
+import { blue, orange } from './style-themes/style-themes'
+
 import { HeaderBar, HeaderTitle } from './WhatIDo'
 
 const flashIn = keyframes`
@@ -11,20 +13,20 @@ const flashIn = keyframes`
     background-color: rgb(235,235,235);
   }
   to{
-    box-shadow: 5px 5px 0px rgb(14,24,84);
+    box-shadow: 5px 5px 0px ${blue};
     background-color: rgb(0,100,0);
   }
 `
 
 const Bar = styled(HeaderBar)`
   border-top: solid rgba(222,196,94,0) 10px;
-  background-color: rgb(233,115,40)
+  background-color: ${orange}
 `
 const ContactSection = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(233,115,40);
+  background-color: ${orange};
   font-family: 'Manrope', sans-serif;
   letter-spacing: 2px;
   font-weight: 700;
@@ -40,7 +42,7 @@ const Form = styled.form`
   padding: 30px 25px;
 `
 const Title = styled(HeaderTitle)`
-  color: rgb(14,24,84);
+  color: ${blue};
   margin-bottom: 20px;
 `
 const Image = styled.img`
@@ -57,11 +59,11 @@ const Input = styled.input`
   padding: 0 20px;
   margin: 8px 0;
   background: rgba(0,0,0,0);
-  border: rgb(14,24,84) solid 1px;
-  color: rgb(14,24,84);
+  border: ${blue} solid 1px;
+  color: ${blue};
 
   &::placeholder{
-    color: rgb(14,24,84)
+    color: ${blue}
   }
 `
 const Message = styled.textarea`
@@ -74,11 +76,11 @@ letter-spacing: 2px;
 padding: 20px;
 margin: 8px 0;
 background: rgba(0,0,0,0);
-border: rgb(14,24,84) solid 1px;
-color: rgb(14,24,84);
+border: ${blue} solid 1px;
+color: ${blue};
 
 &::placeholder{
-  color: rgb(14,24,84)
+  color: ${blue}
 }
 `
 const SendBtn = styled.input`
@@ -86,9 +88,9 @@ const SendBtn = styled.input`
   bottom: 4%;
   width: 150px;
   height: 60px;
-  border: rgb(14,24,84) 1px solid;
+  border: ${blue} 1px solid;
   background-color: rgba(255,255,255);
-  color: rgb(14,24,84);
+  color: ${blue};
   font-family: 'Manrope', sans-serif;
   font-size: 20px;
   letter-spacing: 4px;
@@ -96,7 +98,7 @@ const SendBtn = styled.input`
   
   &:hover{
     transform: scale(1.05);
-    box-shadow: 5px 5px 0px rgb(14,24,84);
+    box-shadow: 5px 5px 0px ${blue};
     background-color: rgb(235,235,235);
     font-weight: 700
   }
@@ -106,7 +108,7 @@ const ThankYouMsg = styled.h4`
   font-size: 24px;
   letter-spacing: 3px;
   color: rgb(235,235,235);
-  box-shadow: 5px 5px 0px rgb(14,24,84);
+  box-shadow: 5px 5px 0px ${blue};
   background-color: rgb(0,100,0);
   animation: ${flashIn} 1s ease-in-out
 `

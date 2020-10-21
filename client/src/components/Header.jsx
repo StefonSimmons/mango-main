@@ -2,22 +2,23 @@ import React from 'react'
 import { useHistory, useLocation, Link } from 'react-router-dom'
 
 import styled from 'styled-components'
+import { blue,orange } from './style-themes/style-themes.js'
 
-import brainLogo from '../assets/brain3.png'
+import brainLogo from '../assets/brain3.svg'
 import arrow from '../assets/arrow.svg'
 
 
 const HeaderTag = styled.header`
   display: flex;
   justify-content: space-between;
-  background-color: rgb(14,24,84);
+  background-color: ${blue};
   padding: 0 50px 5px 50px
 `
 const Back = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
-  color: rgb(233,115,40);
+  color: ${orange};
 `
 const BackArrow = styled.img`
   width: 60px;
@@ -71,7 +72,7 @@ const Group = styled(Link)`
   flex-direction: row;
   align-items: center;
   text-decoration: none;
-  color: rgb(233,115,40);
+  color: ${orange};
 `
 const ForwardText = styled(BackText)`
 `
@@ -96,7 +97,7 @@ export default function Header() {
       name: 'Outreach'
     }
   ]
-  
+
   const goTo = paths.filter(path => path.path !== location.pathname)
 
   return (
