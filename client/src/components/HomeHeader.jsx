@@ -24,8 +24,8 @@ const LeftArea = styled.div`
   justify-content: center;
   align-items: center;
 `
-const Center = styled.section`
-  width: 625px;
+const ColorBlock = styled.section`
+  width: 85%;
   position: relative;
   padding: 30px 25px;
   border-radius: 5px;
@@ -51,13 +51,13 @@ export default function HomeHeader() {
     <>
       <Main>
         <LeftArea>
-          <Center>
+          <ColorBlock>
             <Titles>
               <Title>Neuroscientist.</Title>
               <Title>Ph.D Candidate.</Title>
               <Title>Writer.</Title>
             </Titles>
-          </Center>
+          </ColorBlock>
         </LeftArea>
         <Image src={ashlea} alt="ashlea" />
       </Main>

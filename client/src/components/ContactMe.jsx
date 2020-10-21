@@ -29,7 +29,11 @@ const ContactSection = styled.div`
   font-family: 'Manrope', sans-serif;
   letter-spacing: 2px;
   font-weight: 700;
-  padding-bottom: 95px
+  padding-bottom: 95px;
+
+  @media(max-width: 1000px){
+    flex-direction: column
+  }
 `
 const Form = styled.form`
   display: flex;
@@ -39,13 +43,17 @@ const Form = styled.form`
   height: 50%;
   border-radius: 5px;
   padding: 30px 25px;
+
+  @media(max-width: 1000px){
+    width: 75%;
+  }
 `
 const Title = styled(HeaderTitle)`
   color: ${({theme})=> theme.blue };
   margin-bottom: 20px;
 `
 const Image = styled.img`
-  width: 50%
+  width: 50%;
   height: 50%;
 `
 const Input = styled.input`
@@ -191,7 +199,7 @@ export default function ContactMe() {
             <SendBtn type="submit" value="Send" />
           }
         </Form>
-        <Image src={ashlea} alt="" />
+        <Image src={ashlea} alt="ashlea" />
       </ContactSection>
     </>
   )

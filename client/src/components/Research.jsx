@@ -37,7 +37,7 @@ const ResearchSection = styled.section`
   padding: 40px 0;
 `
 const TitleP = styled(Title)`
-  color: ${({theme})=> theme.orange};
+  color: ${({ theme }) => theme.orange};
   text-align: center;
   margin-top: 20px
 `
@@ -47,7 +47,6 @@ export default function Research() {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
-
 
   const currenResearchDescription = currentResearch.map((paragraph, idx) => {
     return (

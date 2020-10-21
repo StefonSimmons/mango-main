@@ -20,8 +20,8 @@ const Main = styled.nav`
 `
 const BtnSection = styled.section`
   display: flex;
-  justify-content: space-around;
-  width: 50%;
+  justify-content: space-evenly;
+  width: 100%;
 
   position: relative;
   animation: ${slideUp} 1.5s linear;

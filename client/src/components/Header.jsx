@@ -7,7 +7,7 @@ import brainLogo from '../assets/brain3.svg'
 import arrow from '../assets/arrow.svg'
 
 
-const HeaderTag = styled.header`
+const HeaderNav = styled.header`
   display: flex;
   justify-content: space-between;
   background-color: ${({theme})=> theme.blue};
@@ -100,7 +100,7 @@ export default function Header() {
   const goTo = paths.filter(path => path.path !== location.pathname)
 
   return (
-    <HeaderTag id='top'>
+    <HeaderNav id='top'>
       <Back onClick={() => history.goBack()}
         style={location.pathname === '/' ? { visibility: 'hidden' } : { visibility: 'visible' }}
       >
@@ -127,7 +127,7 @@ export default function Header() {
           <ForwardArrow src={arrow} alt='right-arrow' />
         </Group>
       </Forward>
-    </HeaderTag>
+    </HeaderNav>
 
   )
 }

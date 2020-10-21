@@ -5,7 +5,7 @@ import city from '../assets/city.WebP'
 
 const BackgroundImage = styled.div`
   background-image: url(${city});
-  background-size: 100% auto;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed
 `
