@@ -71,7 +71,8 @@ export default function Articles({ articleData }) {
             {article.url.includes('facebook') ?
               <Btn>Watch Here</Btn>
               :
-              <Btn>Read More</Btn>}
+              <Btn>Read More</Btn>
+            }
           </BtnLnk>
         </Details>
       </Article>

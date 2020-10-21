@@ -41,7 +41,6 @@ const Description = styled.p`
   margin: 40px 6px ;
 `
 
-
 export default function About() {
   return (
     <BackgroundImage>

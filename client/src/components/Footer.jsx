@@ -17,8 +17,6 @@ const Foot = styled.footer`
 
 export default function Footer() {
 
-
-
   return (
     <Foot>
       <h4>&#169; by Ashlea A. Morgan </h4>

@@ -58,7 +58,7 @@ export const Btn = styled.button`
   background-color: rgba(0,0,0,0);
   color: white;
   font-size: 24px;
-  border: $${({theme})=> theme.orange} 1px solid;
+  border: ${({theme})=> theme.orange} 1px solid;
   padding: 15px 30px;
   transition: all .3s ease-in-out;
   
@@ -66,7 +66,7 @@ export const Btn = styled.button`
     background-color: rgba(255,135,60,1);
     transform: scale(1.05);
     font-weight: 700;
-    box-shadow: 5px 5px 0px $${({theme})=> theme.orange};
+    box-shadow: 5px 5px 0px ${({theme})=> theme.orange};
     border: rgba(255,135,60,.1) 1px solid;
     color: black
 
