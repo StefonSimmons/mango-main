@@ -15,6 +15,10 @@ const AboutSection = styled.section`
   align-items: center;
   justify-content: flex-end;
   font-family: 'Manrope', sans-serif;
+
+  @media(max-width: 850px){
+    justify-content: center;
+  }
 `
 const AboutBox = styled.section`
   background-color: ${({ theme }) => theme.orangeTrans};
@@ -24,6 +28,10 @@ const AboutBox = styled.section`
   padding: 70px 100px;
   border-radius: 3px;
   animation: ${fadeIn} 2s ease-in-out;
+
+  @media(max-width: 850px){
+    padding: 35px 50px
+  }
 `
 export const AboutTitle = styled.h2`
   text-align: center;
