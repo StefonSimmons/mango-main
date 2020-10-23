@@ -9,8 +9,6 @@ export const fadeIn = keyframes`
   0%{opacity: 0}
   100%{opactiy: 1}
 `
-
-
 const Main = styled.div`
   display: flex;
   justify-content: space-between;
@@ -47,7 +45,6 @@ const ColorBlock = styled.section`
     width: 50%;
     left: 0%;
   }
-
 `
 const Titles = styled.section`
   text-align: left;

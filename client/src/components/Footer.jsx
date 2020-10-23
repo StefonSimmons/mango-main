@@ -13,6 +13,10 @@ const Foot = styled.footer`
   font-size: 20px;
   letter-spacing: 3px;
   height: 100px;
+
+  @media(max-width: 750px){
+    // flex-direction: column;
+  }
 `
 
 export default function Footer() {

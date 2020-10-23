@@ -10,18 +10,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
 /* home navigation animation */
 .container:hover + #home{
   pointer-events: none;
   animation: slideIn 2s linear .1s 2 alternate forwards;
 }
-
-
 @keyframes slideIn{
   0%{
     left: 70%;
@@ -46,4 +40,4 @@ code {
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Manrope&display=swap');

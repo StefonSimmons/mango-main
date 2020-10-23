@@ -16,6 +16,7 @@ const RightArrow = styled(LeftArrow)`
 const ControllerSect = styled.div`
   display: flex;
   justify-content: space-around;
+  width: 100%;
   background-color: ${({ theme }) => theme.blue};
 `
 
