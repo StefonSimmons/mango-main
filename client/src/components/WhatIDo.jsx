@@ -8,7 +8,7 @@ import outreachImg from '../assets/outreach.WebP'
 import writingImg from '../assets/writing.WebP'
 import researchImg from '../assets/research.WebP'
 
-export const HeaderBar = styled.div`
+export const ColorBar = styled.div`
   height: 75px;
   width: 100vw;
   padding: 25px 0;
@@ -16,6 +16,10 @@ export const HeaderBar = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media(max-width: 750px){
+    display: none
+  }
 `
 export const HeaderTitle = styled.h2`
   text-align: center;
@@ -140,17 +144,17 @@ export default function WhatIDo() {
 
   return (
     <>
-      <HeaderBar id='work'>
+      <ColorBar id='work'>
         <HeaderTitle>What I Do</HeaderTitle>
-      </HeaderBar>
+      </ColorBar>
       <WorkContainer >
         {iDos}
       </WorkContainer>
       <SlideShowContainer>
-        <SlideShow works={iDos} />
+        <SlideShow works={iDos}/>
       </SlideShowContainer>
-      <HeaderBar>
-      </HeaderBar>
+      <ColorBar>
+      </ColorBar>
     </>
   )
 }

@@ -4,7 +4,7 @@ import ashlea from '../assets/ashlea-contact.WebP'
 
 import styled, { keyframes } from 'styled-components'
 
-import { HeaderBar, HeaderTitle } from './WhatIDo'
+import { ColorBar, HeaderTitle } from './WhatIDo'
 
 const flashIn = keyframes`
   from{
@@ -17,7 +17,7 @@ const flashIn = keyframes`
   }
 `
 
-const Bar = styled(HeaderBar)`
+const Bar = styled(ColorBar)`
   border-top: solid rgba(222,196,94,0) 10px;
   background-color: ${({theme})=> theme.orange}
 `
