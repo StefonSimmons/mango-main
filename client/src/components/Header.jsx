@@ -11,7 +11,7 @@ const HeaderNav = styled.header`
   display: flex;
   justify-content: space-between;
   background-color: ${({theme})=> theme.blue};
-  padding: 0 50px 5px 50px
+  padding: 0 50px 5px 50px;
 `
 const Back = styled.div`
   display: flex;
@@ -21,12 +21,36 @@ const Back = styled.div`
 `
 const BackArrow = styled.img`
   width: 60px;
-  margin: 0 20px
+  margin: 0 20px;
+
+  @media(max-width: 750px){
+    display: none;
+  }
 `
 const BackText = styled.h4`
   font-family: 'Manrope', sans-serif;
   font-size: 18px;
 `
+
+const Forward = styled(Back)`
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  cursor: auto;
+`
+const ForwardGroup = styled(Link)`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: ${({theme})=> theme.orange};
+`
+const ForwardText = styled(BackText)`
+`
+const ForwardArrow = styled(BackArrow)`
+  transform: rotateY(180deg);
+`
+
 const Lnk = styled.a`
   text-decoration: none;
   color: white;
@@ -59,24 +83,6 @@ const HomeTitle = styled(Title)`
   bottom: 33.33%;
   left: 38%;
   visibility: hidden;
-`
-const Forward = styled(Back)`
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-end;
-  cursor: auto;
-`
-const Group = styled(Link)`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  color: ${({theme})=> theme.orange};
-`
-const ForwardText = styled(BackText)`
-`
-const ForwardArrow = styled(BackArrow)`
-  transform: rotateY(180deg)
 `
 
 export default function Header() {
@@ -117,15 +123,15 @@ export default function Header() {
       </Lnk>
 
       <Forward style={location.pathname === '/' ? { visibility: 'hidden' } : { visibility: 'visible' }}>
-        <Group to={goTo[0].path}>
+        <ForwardGroup to={goTo[0].path}>
           <ForwardText>{goTo[0].name}</ForwardText>
           <ForwardArrow src={arrow} alt='right-arrow' />
-        </Group>
+        </ForwardGroup>
 
-        <Group to={goTo[1].path}>
+        <ForwardGroup to={goTo[1].path}>
           <ForwardText>{goTo[1].name}</ForwardText>
           <ForwardArrow src={arrow} alt='right-arrow' />
-        </Group>
+        </ForwardGroup>
       </Forward>
     </HeaderNav>
 

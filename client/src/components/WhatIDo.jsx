@@ -16,6 +16,9 @@ export const ColorBar = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+`
+
+const ColorBarBottom = styled(ColorBar)`
 
   @media(max-width: 750px){
     display: none
@@ -153,8 +156,8 @@ export default function WhatIDo() {
       <SlideShowContainer>
         <SlideShow works={iDos}/>
       </SlideShowContainer>
-      <ColorBar>
-      </ColorBar>
+      <ColorBarBottom>
+      </ColorBarBottom>
     </>
   )
 }

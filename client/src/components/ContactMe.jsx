@@ -12,20 +12,20 @@ const flashIn = keyframes`
     background-color: ${({ theme }) => theme.offWhite};
   }
   to{
-    box-shadow: 5px 5px 0px ${({theme})=> theme.blue };
+    box-shadow: 5px 5px 0px ${({ theme }) => theme.blue};
     background-color: rgb(0,100,0);
   }
 `
 
 const Bar = styled(ColorBar)`
   border-top: solid rgba(222,196,94,0) 10px;
-  background-color: ${({theme})=> theme.orange}
+  background-color: ${({ theme }) => theme.orange};
 `
 const ContactSection = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${({theme})=> theme.orange};
+  background-color: ${({ theme }) => theme.orange};
   font-family: 'Manrope', sans-serif;
   letter-spacing: 2px;
   font-weight: 700;
@@ -49,7 +49,7 @@ const Form = styled.form`
   }
 `
 const Title = styled(HeaderTitle)`
-  color: ${({theme})=> theme.blue };
+  color: ${({ theme }) => theme.blue};
   margin-bottom: 20px;
 `
 const Image = styled.img`
@@ -65,12 +65,12 @@ const Input = styled.input`
   letter-spacing: 2px;
   padding: 0 20px;
   margin: 8px 0;
-  background: ${({theme})=> theme.orange};
-  border: ${({theme})=> theme.blue } solid 1px;
-  color: ${({theme})=> theme.blue };
+  background: ${({ theme }) => theme.orange};
+  border: ${({ theme }) => theme.blue} solid 1px;
+  color: ${({ theme }) => theme.blue};
 
   &::placeholder{
-    color: ${({theme})=> theme.blue }
+    color: ${({ theme }) => theme.blue}
   }
 `
 const Message = styled.textarea`
@@ -82,12 +82,12 @@ font-weight: 700;
 letter-spacing: 2px;
 padding: 20px;
 margin: 8px 0;
-background: ${({theme})=> theme.orange};
-border: ${({theme})=> theme.blue } solid 1px;
-color: ${({theme})=> theme.blue };
+background: ${({ theme }) => theme.orange};
+border: ${({ theme }) => theme.blue} solid 1px;
+color: ${({ theme }) => theme.blue};
 
 &::placeholder{
-  color: ${({theme})=> theme.blue }
+  color: ${({ theme }) => theme.blue}
 }
 `
 const SendBtn = styled.input`
@@ -95,9 +95,9 @@ const SendBtn = styled.input`
   bottom: 4%;
   width: 150px;
   height: 60px;
-  border: ${({theme})=> theme.blue } 1px solid;
+  border: ${({ theme }) => theme.blue} 1px solid;
   background-color: white;
-  color: ${({theme})=> theme.blue };
+  color: ${({ theme }) => theme.blue};
   font-family: 'Manrope', sans-serif;
   font-size: 20px;
   letter-spacing: 4px;
@@ -105,8 +105,8 @@ const SendBtn = styled.input`
   
   &:hover{
     transform: scale(1.05);
-    box-shadow: 5px 5px 0px ${({theme})=> theme.blue };
-    background-color: ${({theme})=> theme.offWhite};
+    box-shadow: 5px 5px 0px ${({ theme }) => theme.blue};
+    background-color: ${({ theme }) => theme.offWhite};
     font-weight: 700
   }
 `
@@ -114,8 +114,8 @@ const ThankYouMsg = styled.h4`
   padding: 18px;
   font-size: 24px;
   letter-spacing: 3px;
-  color: ${({theme})=> theme.offWhite};
-  box-shadow: 5px 5px 0px ${({theme})=> theme.blue };
+  color: ${({ theme }) => theme.offWhite};
+  box-shadow: 5px 5px 0px ${({ theme }) => theme.blue};
   background-color: rgb(0,100,0);
   animation: ${flashIn} 1s ease-in-out
 `

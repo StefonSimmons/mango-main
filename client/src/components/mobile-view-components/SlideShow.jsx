@@ -23,7 +23,7 @@ const ControllerSect = styled.div`
 export default function SlideShow({ works }) {
 
   const [count, setCount] = useState(0)
-  const [stop, setStop] = useState(true)
+  const [stop, setStop] = useState(false)
 
   useEffect(() => {
     if (!stop) {

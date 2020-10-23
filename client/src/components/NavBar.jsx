@@ -65,7 +65,6 @@ const Modal = styled.div`
   top: 0%;
   width: 100%;
   height: 100%;
-  // background-color: ${({ theme }) => theme.blue};
   background-color: rgba(0,0,0,.7)
 `
 const Navigation = styled.nav`
@@ -74,8 +73,7 @@ const Navigation = styled.nav`
   justify-content: center;
   align-items: center;
   height: 100%;
-  border: red solid 2px;
-  
+  border: rgba(14,24,84,.2) solid 2px;
 `
 const List = styled.ul`
   display: flex;
@@ -87,7 +85,9 @@ const List = styled.ul`
   font-size: 36px;
   font-weight: 700;
   letter-spacing: 8px;
+  padding: 20px;
   background-color: ${({ theme }) => theme.blue};
+  border-radius: 5px;
 `
 const Close = styled.img`
   position: absolute;
@@ -102,7 +102,7 @@ const Lnk = styled.a`
 `
 
 export default function NavBar() {
-  const [modal, setModal] = useState(true)
+  const [modal, setModal] = useState(false)
 
 
   return (
@@ -124,9 +124,17 @@ export default function NavBar() {
           <Navigation>
             <Close src={close} alt='close' onClick={() => setModal(false)}/>
             <List>
-              <Lnk href="#work" onClick={() => setModal(false)}>What I Do</Lnk>
+              <Lnk onClick={() => {
+                setModal(false)
+                window.scrollTo(0, 2040)
+              }
+              } href="#work">What I Do</Lnk>
               <Lnk href="https://mango-mosaic.netlify.app/blog" target='_blank' rel="noopener noreferrer" onClick={() => setModal(false)}>Blog</Lnk>
-              <Lnk href="#contact" onClick={() => setModal(false)}>Contact Me</Lnk>
+              <Lnk onClick={() => {
+                setModal(false)
+                window.scrollTo(0, 2700)
+              }
+              } href="#contact">Contact Me</Lnk>
             </List>
           </Navigation>
         </Modal>
