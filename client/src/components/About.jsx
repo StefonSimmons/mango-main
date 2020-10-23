@@ -30,7 +30,11 @@ const AboutBox = styled.section`
   animation: ${fadeIn} 2s ease-in-out;
 
   @media(max-width: 850px){
-    padding: 35px 50px
+    padding: 35px 50px;
+  }
+  @media(max-width: 750px){
+    width: 100%;
+    margin: 0px;
   }
 `
 export const AboutTitle = styled.h2`
@@ -46,7 +50,14 @@ const Description = styled.p`
   font-weight: 700;
   line-height: 1.875em;
   letter-spacing: 1.5px;
-  margin: 40px 6px ;
+  margin: 40px 6px;
+
+  @media(max-width: 750px){
+    line-height: 2.875em;
+  }
+  @media(max-width: 650px){
+    line-height: 2em;
+  }
 `
 
 export default function About() {
