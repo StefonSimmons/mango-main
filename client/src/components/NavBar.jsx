@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 
+import hamburger from '../assets/hamburger.png'
 
 // animation
 const slideUp = keyframes`
   0%{bottom: -10%; opacity: 0; border-bottom: ${({theme})=> theme.blue} solid 1px}
   50%{bottom: -5%; opacity: .5; border-bottom: ${({theme})=> theme.blue} solid 1px}
   100%{bottom: 0%; opacity: 1}
+
 `
 
 const Main = styled.nav`
@@ -25,6 +27,10 @@ const BtnSection = styled.section`
 
   position: relative;
   animation: ${slideUp} 1.5s linear;
+
+  @media(max-width: 750px){
+    display: none
+  }
 `
 const Btn = styled.button`
   padding: 12px;
@@ -46,6 +52,10 @@ const Btn = styled.button`
 `
 
 export default function NavBar() {
+  const [navDisplay, setNav] = useState(false)
+
+  
+
   return (
     <Main>
       <BtnSection>
@@ -59,6 +69,12 @@ export default function NavBar() {
           <Btn>Contact Me</Btn>
         </a>
       </BtnSection>
+      <img src={hamburger} alt='hamburger-menu' onClick={() => setNav(!navDisplay)}/>
+      <ul style={{display: none}}>
+        <a href="#work">What I Do</a>
+        <a href="https://mango-mosaic.netlify.app/blog" target='_blank' rel="noopener noreferrer">Blog</a>
+        <a href="#contact">Contact Me</a>
+      </ul>
     </Main>
   )
 }

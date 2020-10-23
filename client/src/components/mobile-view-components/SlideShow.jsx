@@ -47,10 +47,6 @@ export default function SlideShow({ works }) {
     else setCount(prevCount => prevCount + 1)
   }
 
-  const displayNav = {
-    visibility: 'visible'
-  }
-
   return (
     <div>
       {works[count]}
@@ -58,7 +54,7 @@ export default function SlideShow({ works }) {
         <LeftArrow
           src={arrow}
           alt="left-slideshow-arrow"
-          style={stop ? displayNav : { visibility: 'hidden' }}
+          style={stop ? { visibility: 'visible' } : { visibility: 'hidden' }}
           onClick={goBack}
         />
         {!stop ?
@@ -69,7 +65,7 @@ export default function SlideShow({ works }) {
         <RightArrow
           src={arrow}
           alt="right-slideshow-arrow"
-          style={stop ? displayNav : { visibility: 'hidden' }}
+          style={stop ? { visibility: 'visible' }  : { visibility: 'hidden' }}
           onClick={goForward}
         />
       </ControllerSect>
