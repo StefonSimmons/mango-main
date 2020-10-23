@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 
 import styled from 'styled-components'
-import arrow from '../../assets/leftArrow.svg'
-import pause from '../../assets/pause.svg'
-import play from '../../assets/play.svg'
+import arrow from '../../assets/what_I_do_arrow.svg'
+import pause from '../../assets/pause.png'
+import play from '../../assets/play.png'
 
 
 
@@ -18,16 +18,30 @@ const RightArrow = styled(LeftArrow)`
 const NavigationSect = styled.div`
   display: flex;
   justify-content: space-between;
-  border: red solid 1px;
+`
+
+const ControllerSect = styled.div`
+  display: flex;
+  justify-content: center
+`
+const Pause = styled.img`
+
+`
+const Play = styled.img`
+
 `
 
 export default function SlideShow({ works }) {
 
   const [count, setCount] = useState(0)
+  const [stop, setStop] = useState(false)
 
   useEffect(() => {
-    const interval = setInterval(changeCard, 2500)
-    return () => clearInterval(interval);
+    if (!stop) {
+      const interval = setInterval(changeCard, 2500)
+      return () => clearInterval(interval);
+    }
+    else return () => null
   })
 
   const changeCard = () => {
@@ -35,17 +49,40 @@ export default function SlideShow({ works }) {
     else setCount(prevCount => prevCount + 1)
   }
 
+  const goBack = () => {
+    console.log(count)
+    if (count <= 0) setCount(2)
+    else setCount(prevCount => prevCount - 1)
+  }
+
+  const goForward = () => {
+    console.log(count)
+    if (count >= 2) setCount(0)
+    else setCount(prevCount => prevCount + 1)
+  }
 
   return (
     <div>
       <NavigationSect>
-        <LeftArrow src={arrow} alt="left-slideshow-arrow" />
-        <RightArrow src={arrow} alt="right-slideshow-arrow" />
+        {stop ?
+          <>
+            <LeftArrow src={arrow}
+              alt="left-slideshow-arrow"
+              onClick={goBack}
+            />
+            <RightArrow src={arrow}
+              alt="right-slideshow-arrow"
+              onClick={goForward}
+            />
+          </>
+          : null
+        }
       </NavigationSect>
       {works[count]}
-      <img src={pause} alt='pause-button'/>
-
-      <img src={play} alt='play-button'/>
+      <ControllerSect>
+        <Pause src={pause} alt='pause-button' onClick={() => { setStop(true) }} />
+        <Play src={play} alt='play-button' onClick={() => { setStop(false) }} />
+      </ControllerSect>
     </div>
   )
 }
