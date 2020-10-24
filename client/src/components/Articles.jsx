@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styled from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
 
 const ArticlesSection = styled.div`
   display: flex;
@@ -11,6 +11,11 @@ const Article = styled.article`
   display: flex;
   align-items: center;
   padding: 50px;
+  flex-direction: ${({ id, reverse }) => id % 2 ? reverse.direction : null};
+  
+  @media(max-width: 1000px){
+    flex-direction: column;
+  }
 `
 const Image = styled.img`
   width: 100%;
@@ -38,7 +43,7 @@ const BtnLnk = styled.a`
 const Btn = styled.button`
   padding: 10px 5px;
   width: 150px;
-  background-color: ${({theme})=> theme.orange};
+  background-color: ${({ theme }) => theme.orange};
   color: white;
   border: white solid 1px;
   transition: all .3s ease-in-out;
@@ -59,10 +64,10 @@ export default function Articles({ articleData }) {
 
   const articles = articleData.map((article, idx) => {
     const rowReverse = {
-      flexDirection: 'row-reverse'
+      direction: 'row-reverse'
     }
     return (
-      <Article key={idx} style={idx % 2 ? rowReverse : null}>
+      <Article key={idx} id={idx} reverse={rowReverse}>
         <Image src={article.image} alt={article.title} />
         <Details>
           <Title>{article.title}</Title>

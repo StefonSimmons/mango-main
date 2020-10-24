@@ -5,27 +5,32 @@ import styled from 'styled-components'
 
 import brainLogo from '../assets/brain3.svg'
 import arrow from '../assets/arrow.svg'
-
+import hamburger from '../assets/hamburger-head.png'
 
 const HeaderNav = styled.header`
   display: flex;
   justify-content: space-between;
-  background-color: ${({theme})=> theme.blue};
+  background-color: ${({ theme }) => theme.blue};
   padding: 0 50px 5px 50px;
+
+  @media(max-width: 750px){
+    // justify-content: flex-end;
+    align-items: center;
+  }
 `
 const Back = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
-  color: ${({theme})=> theme.orange};
+  color: ${({ theme }) => theme.orange};
+  
+  @media(max-width: 750px){
+    display: none;
+  }
 `
 const BackArrow = styled.img`
   width: 60px;
   margin: 0 20px;
-
-  @media(max-width: 750px){
-    display: none;
-  }
 `
 const BackText = styled.h4`
   font-family: 'Manrope', sans-serif;
@@ -43,7 +48,7 @@ const ForwardGroup = styled(Link)`
   flex-direction: row;
   align-items: center;
   text-decoration: none;
-  color: ${({theme})=> theme.orange};
+  color: ${({ theme }) => theme.orange};
 `
 const ForwardText = styled(BackText)`
 `
@@ -111,7 +116,7 @@ export default function Header() {
         style={location.pathname === '/' ? { visibility: 'hidden' } : { visibility: 'visible' }}
       >
         <BackArrow src={arrow} alt='left-arrow' />
-        <BackText>Back</BackText>
+        <BackText>Go Back</BackText>
       </Back>
 
       <Lnk href='/'>
@@ -133,6 +138,9 @@ export default function Header() {
           <ForwardArrow src={arrow} alt='right-arrow' />
         </ForwardGroup>
       </Forward>
+      <div>
+        <img src={hamburger} alt="menu" />
+      </div>
     </HeaderNav>
 
   )
