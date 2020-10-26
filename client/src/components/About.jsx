@@ -36,6 +36,10 @@ const AboutBox = styled.section`
     width: 100%;
     margin: 0px;
   }
+  @media(max-width: 450px){
+    padding: 70px 10px;
+    height: 50%
+  }
 `
 export const AboutTitle = styled.h2`
   text-align: center;
@@ -53,10 +57,13 @@ const Description = styled.p`
   margin: 40px 6px;
 
   @media(max-width: 750px){
-    line-height: 2.875em;
+    line-height: 2em;
   }
   @media(max-width: 650px){
-    line-height: 2em;
+    font-size: 20px;
+  }
+  @media(max-width: 450px){
+    font-size: 18px;
   }
 `
 

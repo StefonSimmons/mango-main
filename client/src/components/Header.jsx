@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import brainLogo from '../assets/brain3.svg'
 import arrow from '../assets/arrow.svg'
 import hamburger from '../assets/hamburger-head.png'
+import ModalComponent from './ModalComponent'
 
 const HeaderNav = styled.header`
   display: flex;
@@ -14,8 +15,12 @@ const HeaderNav = styled.header`
   padding: 0 50px 5px 50px;
 
   @media(max-width: 750px){
-    // justify-content: flex-end;
     align-items: center;
+    flex-direction: column;
+    padding: 20px 50px;
+  }
+  @media(max-width: 400px){
+    padding: 20px 0px
   }
 `
 const Back = styled.div`
@@ -73,6 +78,10 @@ const Section = styled.section`
     opacity: 0;
     width: 575px;
   }
+
+  @media(max-width: 400px){
+    width: 355px;
+  }
 `
 const Logo = styled.img`
   margin: 10px 0
@@ -82,12 +91,28 @@ const Title = styled.h1`
   font-size: 28px;
   letter-spacing: 2px;
   font-weight: 700;
+
+  @media(max-width: 400px){
+    width: 355px;
+  }
 `
 const HomeTitle = styled(Title)`
   position: relative;
   bottom: 33.33%;
   left: 38%;
   visibility: hidden;
+
+  @media(max-width: 750px){
+    display: none;
+  }
+`
+const HamburgerWrapper = styled.div`
+  display: none;
+
+  @media(max-width: 750px){
+    display: ${({ pathname }) => pathname === '/' ? 'none' : 'block'};
+    margin-top: 20px 
+  }
 `
 
 export default function Header() {
@@ -107,6 +132,8 @@ export default function Header() {
       name: 'Outreach'
     }
   ]
+
+
 
   const goTo = paths.filter(path => path.path !== location.pathname)
 
@@ -138,9 +165,18 @@ export default function Header() {
           <ForwardArrow src={arrow} alt='right-arrow' />
         </ForwardGroup>
       </Forward>
-      <div>
-        <img src={hamburger} alt="menu" />
-      </div>
+
+      <HamburgerWrapper pathname={location.pathname}>
+        <ModalComponent
+          hamburger={hamburger}
+          navOneName={goTo[0].name}
+          navOnePath={goTo[0].path}
+          navTwoName={goTo[1].name}
+          navTwoPath={goTo[1].path}
+          history={history}
+        />
+      </HamburgerWrapper>
+
     </HeaderNav>
 
   )

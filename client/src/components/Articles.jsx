@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styled, { ThemeProvider } from 'styled-components'
+import styled from 'styled-components'
 
 const ArticlesSection = styled.div`
   display: flex;
@@ -16,6 +16,9 @@ const Article = styled.article`
   @media(max-width: 1000px){
     flex-direction: column;
   }
+  @media(max-width: 750px){
+    padding: 50px 0px
+  }
 `
 const Image = styled.img`
   width: 100%;
@@ -29,13 +32,28 @@ const Details = styled.section`
   font-family: 'Manrope', sans-serif;
   color: white;
   line-height: 1.75;
+
+  @media(max-width: 400px){
+    margin: 40px 10px;
+  }
 `
 const Title = styled.h2`
-  font-size: 36px
+  font-size: 36px;
+
+  @media(max-width: 400px){
+    font-size: 24px;
+    font-weight: 700
+  }
 `
 const Description = styled.p`
   font-size: 24px;
-  margin: 50px 0
+  margin: 50px 0;
+
+  @media(max-width: 400px){
+    font-size: 18px;
+    margin: 30px 0;
+
+  }
 `
 const BtnLnk = styled.a`
   align-self: center;

@@ -9,13 +9,11 @@ import styled from 'styled-components'
 
 const BackgroundImage = styled(Background)`
   background-image: url(${outreach});
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start 
+
 `
 
 const TitleR = styled(Title)`
-  color: ${({theme})=> theme.orange}
+  color: ${({ theme }) => theme.orange}
 `
 const OutreachSection = styled(WritingSection)`
 `

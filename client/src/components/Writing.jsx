@@ -10,11 +10,21 @@ export const Background = styled.div`
   background-image: url(${writing});
   background-size: cover;
   background-position: center;
+  background-color: #000;
   background-attachment: fixed;
   height: 75vh;
   display: flex;
   align-items: center;
-  padding: 0px 200px
+  padding: 0px 200px;
+
+  @media(max-width: 750px){
+    justify-content: center
+  }
+  @media(max-width: 400px){
+    padding: 0px;
+    background-attachment: scroll;
+
+  }
 `
 export const Title = styled.h1`
   font-family: 'Manrope', sans-serif;

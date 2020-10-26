@@ -45,6 +45,9 @@ const ColorBlock = styled.section`
     width: 50%;
     left: 0%;
   }
+  @media(max-width: 450px){
+    width: 90%
+  }
 `
 const Titles = styled.section`
   text-align: left;
@@ -53,6 +56,9 @@ const Titles = styled.section`
   line-height: 2em;
   color: ${({ theme }) => theme.blue};
   
+  @media(max-width: 650px){
+    font-size: 28px;
+  }
 `
 const Title = styled.h2`
   animation: ${fadeIn} 1.5s ease-in-out;

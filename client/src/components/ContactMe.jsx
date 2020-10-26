@@ -47,6 +47,10 @@ const Form = styled.form`
   @media(max-width: 1000px){
     width: 75%;
   }
+  @media(max-width: 450px){
+    width: 100%;
+    padding: 30px 0px;
+  }
 `
 const Title = styled(HeaderTitle)`
   color: ${({ theme }) => theme.blue};

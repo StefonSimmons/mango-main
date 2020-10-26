@@ -20,6 +20,11 @@ const ResearchDetail = styled.article`
 const Publication = styled.p`
   width: 50%;
   margin: 20px 0;
+
+  @media(max-width: 1000px){
+    width: 75%;
+    font-size: 18px;
+  }
 `
 
 export default function ResearchArticles() {

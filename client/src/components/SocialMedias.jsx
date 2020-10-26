@@ -7,7 +7,11 @@ const LinkList = styled.ul`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 250px
+  width: 250px;
+
+  @media(max-width: 750px){
+    width: 90%;
+    margin-bottom: 20px 
 `
 const MediumLnk = styled.a`
   color: rgb(38,38,38);

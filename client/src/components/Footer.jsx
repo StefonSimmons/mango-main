@@ -15,7 +15,8 @@ const Foot = styled.footer`
   height: 100px;
 
   @media(max-width: 750px){
-    // flex-direction: column;
+    flex-direction: column-reverse;
+    letter-spacing: 1px;
   }
 `
 

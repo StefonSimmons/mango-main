@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
+import ModalComponent from './ModalComponent'
 import styled, { keyframes } from 'styled-components'
 
 import hamburger from '../assets/hamburger.png'
-import close from '../assets/close.png'
 
 // animation
 const slideUp = keyframes`
@@ -52,58 +52,7 @@ const Btn = styled.button`
   }
 `
 
-const HamburgerMenu = styled.div`
-  display: none;
-
-  @media(max-width: 750px){
-    display: block;
-  }
-`
-const Modal = styled.div`
-  position: fixed;
-  left: 0%;
-  top: 0%;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,.7)
-`
-const Navigation = styled.nav`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  border: rgba(14,24,84,.2) solid 2px;
-`
-const List = styled.ul`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-
-  font-family: 'Julius Sans One', sans-serif;
-  font-size: 36px;
-  font-weight: 700;
-  letter-spacing: 8px;
-  padding: 20px;
-  background-color: ${({ theme }) => theme.blue};
-  border-radius: 5px;
-`
-const Close = styled.img`
-  position: absolute;
-  right: 0%;
-  top: 0%;
-  margin: 50px;
-`
-const Lnk = styled.a`
-  text-decoration: none;
-  color: white;
-  margin: 40px 0px;
-`
-
 export default function NavBar() {
-  const [modal, setModal] = useState(false)
-
 
   return (
     <Main>
@@ -118,27 +67,7 @@ export default function NavBar() {
           <Btn>Contact Me</Btn>
         </a>
       </BtnSection>
-      <HamburgerMenu>
-        <img src={hamburger} alt='hamburger-menu' onClick={() => setModal(true)} />
-        <Modal style={modal ? { display: 'block' } : { display: 'none' }}>
-          <Navigation>
-            <Close src={close} alt='close' onClick={() => setModal(false)}/>
-            <List>
-              <Lnk onClick={() => {
-                setModal(false)
-                window.scrollTo(0, 2040)
-              }
-              } href="#work">What I Do</Lnk>
-              <Lnk href="https://mango-mosaic.netlify.app/blog" target='_blank' rel="noopener noreferrer" onClick={() => setModal(false)}>Blog</Lnk>
-              <Lnk onClick={() => {
-                setModal(false)
-                window.scrollTo(0, 2700)
-              }
-              } href="#contact">Contact Me</Lnk>
-            </List>
-          </Navigation>
-        </Modal>
-      </HamburgerMenu>
+      <ModalComponent hamburger={hamburger} />
     </Main>
   )
 }
