@@ -3,7 +3,7 @@ import { useHistory, useLocation, Link } from 'react-router-dom'
 
 import styled from 'styled-components'
 
-import brainLogo from '../assets/brain3.svg'
+import brainLogo from '../assets/brain.svg'
 import arrow from '../assets/arrow.svg'
 import hamburger from '../assets/hamburger-head.png'
 import ModalComponent from './ModalComponent'
