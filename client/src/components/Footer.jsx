@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import SocialMedias from './SocialMedias'
 
+
 const Foot = styled.footer`
   display: flex;
   align-items: center;
@@ -12,11 +13,19 @@ const Foot = styled.footer`
   font-size: 20px;
   letter-spacing: 3px;
   height: 100px;
+
+  @media(max-width: 750px){
+    flex-direction: column-reverse;
+    letter-spacing: 1px;
+  }
 `
+
 export default function Footer() {
+
   return (
     <Foot>
-      <h5>&#169; by Ashlea A. Morgan</h5>
+      <h4>&#169; by Ashlea A. Morgan </h4>
+      <h4>Crafted by Stefon Simmons</h4>
       <SocialMedias />
     </Foot>
   )

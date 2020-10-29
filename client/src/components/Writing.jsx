@@ -1,9 +1,12 @@
 import React, { useEffect } from 'react'
-import writing from '../assets/writing.png'
+import Articles from './Articles'
+import { articleData } from '../data/data.js'
+
+import writing from '../assets/writing.WebP'
 
 import styled from 'styled-components'
 
-const Background = styled.div`
+export const Background = styled.div`
   background-image: url(${writing});
   background-size: cover;
   background-position: center;
@@ -11,18 +14,26 @@ const Background = styled.div`
   height: 75vh;
   display: flex;
   align-items: center;
-  padding: 0px 200px
+  padding: 0px 200px;
+
+  @media(max-width: 750px){
+    justify-content: center
+  }
+  @media(max-width: 400px){
+    padding: 0px;
+    background-attachment: scroll;
+  }
 `
-const Title = styled.h1`
+export const Title = styled.h1`
   font-family: 'Manrope', sans-serif;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 56px;
   letter-spacing: 4px;
   color: white;
 `
-const WritingSection = styled.section`
-  background-color: rgb(233,115,40);
-  height: 100vh
+export const WritingSection = styled.section`
+  background-color: ${({theme})=> theme.orange};
+  height: 100%;
 `
 
 export default function Writing() {
@@ -30,14 +41,14 @@ export default function Writing() {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
-  
+
   return (
     <div>
       <Background>
         <Title>Writing</Title>
       </Background>
       <WritingSection>
-
+        <Articles articleData={articleData} />
       </WritingSection>
     </div>
   )
