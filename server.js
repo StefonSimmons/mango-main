@@ -15,7 +15,6 @@ app.use(logger('dev'))
 // SETUP NODEMAILER
 const nodemailer = require('nodemailer');
 const creds = require('./config');
-const config = require('./config');
 
 // ----------------------------------------------------------------
 //                      NODE-MAILER TRANSPORTER
@@ -65,7 +64,7 @@ app.post('/send-email', (req, res) => {
 
   let mail = {
     from: email,
-    to: config.USER,
+    to: creds.USER,
     subject: subject,
     html: message
   }
