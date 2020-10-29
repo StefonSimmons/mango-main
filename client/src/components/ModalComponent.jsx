@@ -94,7 +94,7 @@ export default function ModalComponent({
                 window.scrollTo(0, 1730)
               }
               } to='#work'>What I Do</Lnk>
-              <Lnk onClick={() => setModal(false)} href="https://mango-mosaic.netlify.app/blog" target='_blank' rel="noopener noreferrer">Blog</Lnk>
+              <Lnk2 onClick={() => setModal(false)} to='/blog'>Blog</Lnk2>
               <Lnk onClick={() => {
                 setModal(false)
                 window.scrollTo(0, 2435)

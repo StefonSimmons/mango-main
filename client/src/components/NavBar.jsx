@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import ModalComponent from './ModalComponent'
 import styled, { keyframes } from 'styled-components'
 
@@ -60,9 +61,9 @@ export default function NavBar() {
         <a href='#work'>
           <Btn>What I Do</Btn>
         </a>
-        <a href="https://mango-mosaic.netlify.app/blog" target='_blank' rel="noopener noreferrer">
+        <Link to='/blog'>
           <Btn>Blog</Btn>
-        </a>
+        </Link>
         <a href='#contact'>
           <Btn>Contact Me</Btn>
         </a>

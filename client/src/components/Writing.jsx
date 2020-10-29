@@ -17,7 +17,7 @@ export const Background = styled.div`
   padding: 0px 200px;
 
   @media(max-width: 750px){
-    justify-content: center
+    justify-content: center;
   }
   @media(max-width: 400px){
     padding: 0px;
