@@ -121,7 +121,12 @@ const ThankYouMsg = styled.h4`
   color: ${({ theme }) => theme.offWhite};
   box-shadow: 5px 5px 0px ${({ theme }) => theme.blue};
   background-color: rgb(0,100,0);
-  animation: ${flashIn} 1s ease-in-out
+  animation: ${flashIn} 1s ease-in-out;
+
+  @media(max-width: 500px){
+    padding: 10px;
+    text-align: center;
+  }
 `
 
 export default function ContactMe() {
