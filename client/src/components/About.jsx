@@ -7,7 +7,12 @@ const BackgroundImage = styled.div`
   background-image: url(${city});
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-attachment: fixed
+  background-attachment: fixed;
+
+  @media(max-width: 750px){
+    background-attachment: scroll;
+    background-size: cover
+  }
 `
 const AboutSection = styled.section`
   height: 990px;

@@ -10,7 +10,6 @@ export const Background = styled.div`
   background-image: url(${writing});
   background-size: cover;
   background-position: center;
-  background-color: #000;
   background-attachment: fixed;
   height: 75vh;
   display: flex;
@@ -23,13 +22,12 @@ export const Background = styled.div`
   @media(max-width: 400px){
     padding: 0px;
     background-attachment: scroll;
-
   }
 `
 export const Title = styled.h1`
   font-family: 'Manrope', sans-serif;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 56px;
   letter-spacing: 4px;
   color: white;
 `

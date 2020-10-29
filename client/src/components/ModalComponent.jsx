@@ -10,7 +10,11 @@ const HamburgerMenu = styled.div`
 
   @media(max-width: 750px){
     display: block;
+
   }
+`
+const Hamburger = styled.img`
+  @media(max-width: 450px){width: 70px}
 `
 const Modal = styled.div`
   display: ${({ modal }) => modal ? 'block' : 'none'};
@@ -79,7 +83,7 @@ export default function ModalComponent({
 
   return (
     <HamburgerMenu>
-      <img src={hamburger} alt='hamburger-menu' onClick={() => setModal(true)} />
+      <Hamburger src={hamburger} alt='hamburger-menu' onClick={() => setModal(true)} />
       { location.pathname === '/' ?
         < Modal modal={modal}>
           <Navigation>
@@ -87,13 +91,13 @@ export default function ModalComponent({
             <List>
               <Lnk onClick={() => {
                 setModal(false)
-                window.scrollTo(0, 2040)
+                window.scrollTo(0, 1730)
               }
               } to='#work'>What I Do</Lnk>
               <Lnk onClick={() => setModal(false)} href="https://mango-mosaic.netlify.app/blog" target='_blank' rel="noopener noreferrer">Blog</Lnk>
               <Lnk onClick={() => {
                 setModal(false)
-                window.scrollTo(0, 2850)
+                window.scrollTo(0, 2435)
               }
               } to='#contact'>Contact</Lnk>
             </List>
@@ -104,7 +108,11 @@ export default function ModalComponent({
           <Navigation>
             <Close src={close} alt='close' onClick={() => setModal(false)} />
             <List>
-              <BackTxt onClick={() => history.goBack()}>Back</BackTxt>
+              <BackTxt onClick={() => {
+                history.goBack()
+                setModal(false)
+              }
+              }>Back</BackTxt>
               <Lnk2 to={navOnePath} onClick={() => setModal(false)}>{navOneName}</Lnk2>
               <Lnk2 to={navTwoPath} onClick={() => setModal(false)}>{navTwoName}</Lnk2>
             </List>

@@ -7,19 +7,26 @@ import pause from '../../assets/pause.png'
 import play from '../../assets/play.png'
 
 
+const ControllerSect = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background-color: ${({ theme }) => theme.blue};
+`
 const LeftArrow = styled.img`
+  height: 50px;
+  border-radius: 45px;
+  padding: 10px 23px;
+  background-color: rgba(36, 56, 123, .4);
 `
 const RightArrow = styled(LeftArrow)`
   transform: rotateY(180deg)
 `
 
-const ControllerSect = styled.div`
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  background-color: ${({ theme }) => theme.blue};
+const PausePlay = styled.img`
+  width: 80px
 `
-
 export default function SlideShow({ works }) {
 
   const [count, setCount] = useState(0)
@@ -55,18 +62,16 @@ export default function SlideShow({ works }) {
         <LeftArrow
           src={arrow}
           alt="left-slideshow-arrow"
-          style={stop ? { visibility: 'visible' } : { visibility: 'hidden' }}
           onClick={goBack}
         />
         {!stop ?
-          <img src={pause} alt='pause-button' onClick={() => { setStop(true) }} />
+          <PausePlay src={pause} alt='pause-button' onClick={() => { setStop(true) }} />
           :
-          <img src={play} alt='play-button' onClick={() => { setStop(false) }} />
+          <PausePlay src={play} alt='play-button' onClick={() => { setStop(false) }} />
         }
         <RightArrow
           src={arrow}
           alt="right-slideshow-arrow"
-          style={stop ? { visibility: 'visible' }  : { visibility: 'hidden' }}
           onClick={goForward}
         />
       </ControllerSect>
