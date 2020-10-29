@@ -11,13 +11,14 @@ const BackgroundImage = styled(Background)`
   background-image: url(${outreach});
   padding: 0px
 `
-const Overlay = styled.div`
+export const Overlay = styled.div`
   background-color: rgba(0,0,0,.4);
   width: 100vw;
   height: 100%;
   padding-left: 200px;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 
   @media(max-width: 750px){
     justify-content: center;

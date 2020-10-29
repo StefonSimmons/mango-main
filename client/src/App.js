@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 import Writing from './components/Writing'
 import Research from './components/Research'
 import Outreach from './components/Outreach'
+import Blog from './components/Blog'
 import ColorThemeProvider from './components/style-themes/ColorThemeProvider'
 
 function App() {
@@ -38,6 +39,9 @@ function App() {
           <Outreach />
         </Route>
 
+        <Route path='/blog'>
+          <Blog />
+        </Route>
 
         <Footer />
       </ColorThemeProvider>
