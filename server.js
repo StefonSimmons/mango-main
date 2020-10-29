@@ -1,3 +1,6 @@
+// Environment Vars
+require('dotenv').config();
+const {USERNAME, TOKEN} = process.env
 // SETUP SERVER
 const express = require('express');
 const app = express();
@@ -12,9 +15,9 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use(logger('dev'))
 
+
 // SETUP NODEMAILER
 const nodemailer = require('nodemailer');
-const creds = require('./config');
 
 // ----------------------------------------------------------------
 //                      NODE-MAILER TRANSPORTER
@@ -23,8 +26,8 @@ const creds = require('./config');
 let transport = {
   host: 'smtp.gmail.com',
   auth: {
-    user: creds.USER,
-    pass: creds.TOKEN // set-up via 2-factor & App Password
+    user: USERNAME,
+    pass: TOKEN // set-up via 2-factor & App Password
   }
 }
 
@@ -64,7 +67,7 @@ app.post('/send-email', (req, res) => {
 
   let mail = {
     from: email,
-    to: creds.USER,
+    to: USERNAME,
     subject: subject,
     html: message
   }
