@@ -19,6 +19,7 @@ const OverlayBack = styled(Overlay)`
 `
 
 const MangoTitle = styled(Title)`
+  //passing the theme prop
   color: ${({ theme }) => theme.orange}
 `
 const Subtitle = styled.h2`
