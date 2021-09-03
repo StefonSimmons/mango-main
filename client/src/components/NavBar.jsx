@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import ModalComponent from './ModalComponent'
 import styled, { keyframes } from 'styled-components'
 
@@ -61,9 +60,9 @@ export default function NavBar() {
         <a href='#work'>
           <Btn>What I Do</Btn>
         </a>
-        <Link to='/blog'>
+        <a href='https://ashleaamorgan.medium.com/' target="_blank" rel="noopener noreferrer">
           <Btn>Blog</Btn>
-        </Link>
+        </a>
         <a href='#contact'>
           <Btn>Contact Me</Btn>
         </a>
