@@ -94,24 +94,26 @@ color: ${({ theme }) => theme.blue};
   color: ${({ theme }) => theme.blue}
 }
 `
-const SendBtn = styled.input`
+const SendBtn = styled.button`
   position: relative;
   bottom: 4%;
   width: 150px;
   height: 60px;
-  border: ${({ theme }) => theme.blue} 1px solid;
-  background-color: white;
-  color: ${({ theme }) => theme.blue};
+  padding: ${(({disabled}) => disabled && '0 15px')};
+  border: ${({ theme, disabled }) => !disabled ? theme.blue : theme.greyDisabled} 1px solid;
+  background-color: ${({theme, disabled}) => !disabled ? 'white' : theme.whiteDisabled};
+  color: ${({ theme, disabled }) => !disabled ? theme.blue : theme.greyDisabled};
   font-family: 'Manrope', sans-serif;
   font-size: 20px;
   letter-spacing: 4px;
   transition: all .3s ease-in-out;
+  cursor: pointer;
   
   &:hover{
-    transform: scale(1.05);
-    box-shadow: 5px 5px 0px ${({ theme }) => theme.blue};
-    background-color: ${({ theme }) => theme.offWhite};
-    font-weight: 700
+    transform: ${({ disabled }) => !disabled ? "scale(1.05)" : "scale(1)"};
+    box-shadow: ${({ theme, disabled }) => !disabled ? `5px 5px 0px ${theme.blue}` : 'none'};
+    background-color: ${({ theme, disabled }) => !disabled && theme.offWhite };
+    font-weight: ${({disabled})=> !disabled && '700'};
   }
 `
 const ThankYouMsg = styled.h4`
@@ -161,6 +163,7 @@ export default function ContactMe() {
       message: ''
     })
     updateSent(response.data)
+
   }
 
   return (
@@ -202,10 +205,14 @@ export default function ContactMe() {
             value={message}
             onChange={(e) => handleChange(e)}
           />
-          {sent.msg === 'success' ?
+          {!sent.msg &&
+            <SendBtn onClick={() => updateSent({ msg: 'sending' })} type="button">Send</SendBtn>
+          }
+          {sent.msg === 'sending' &&
+            <SendBtn disabled type="button" sendingColor="grey">Sending</SendBtn>
+          }
+          {sent.msg === 'success' &&
             <ThankYouMsg>Thanks for the Message!</ThankYouMsg>
-            :
-            <SendBtn type="submit" value="Send" />
           }
         </Form>
         <Image src={ashlea} alt="ashlea" />
