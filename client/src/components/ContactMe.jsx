@@ -99,9 +99,9 @@ const SendBtn = styled.button`
   bottom: 4%;
   width: 150px;
   height: 60px;
-  padding: ${(({disabled}) => disabled && '0 15px')};
+  padding: ${(({ disabled }) => disabled && '0 15px')};
   border: ${({ theme, disabled }) => !disabled ? theme.blue : theme.greyDisabled} 1px solid;
-  background-color: ${({theme, disabled}) => !disabled ? 'white' : theme.whiteDisabled};
+  background-color: ${({ theme, disabled }) => !disabled ? 'white' : theme.whiteDisabled};
   color: ${({ theme, disabled }) => !disabled ? theme.blue : theme.greyDisabled};
   font-family: 'Manrope', sans-serif;
   font-size: 20px;
@@ -112,8 +112,8 @@ const SendBtn = styled.button`
   &:hover{
     transform: ${({ disabled }) => !disabled ? "scale(1.05)" : "scale(1)"};
     box-shadow: ${({ theme, disabled }) => !disabled ? `5px 5px 0px ${theme.blue}` : 'none'};
-    background-color: ${({ theme, disabled }) => !disabled && theme.offWhite };
-    font-weight: ${({disabled})=> !disabled && '700'};
+    background-color: ${({ theme, disabled }) => !disabled && theme.offWhite};
+    font-weight: ${({ disabled }) => !disabled && '700'};
   }
 `
 const ThankYouMsg = styled.h4`
@@ -153,8 +153,7 @@ export default function ContactMe() {
 
   const { name, fromEmail, subject, message } = emailData
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
+  const handleSubmit = async () => {
     const response = await sendEmail(emailData)
     setEmailData({
       name: '',
@@ -172,7 +171,7 @@ export default function ContactMe() {
         <Title>Contact Me</Title>
       </Bar>
       <ContactSection>
-        <Form onSubmit={handleSubmit}>
+        <Form>
           <Input
             type="text"
             className='input'
@@ -206,7 +205,10 @@ export default function ContactMe() {
             onChange={(e) => handleChange(e)}
           />
           {!sent.msg &&
-            <SendBtn onClick={() => updateSent({ msg: 'sending' })} type="button">Send</SendBtn>
+            <SendBtn onClick={() => {
+              updateSent({ msg: 'sending' })
+              handleSubmit()
+            }} type="button">Send</SendBtn>
           }
           {sent.msg === 'sending' &&
             <SendBtn disabled type="button" sendingColor="grey">Sending</SendBtn>
