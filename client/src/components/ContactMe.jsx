@@ -16,6 +16,10 @@ const flashIn = keyframes`
     background-color: rgb(0,100,0);
   }
 `
+const spin = keyframes`
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+`
 
 const Bar = styled(ColorBar)`
   border-top: solid rgba(222,196,94,0) 10px;
@@ -131,8 +135,25 @@ const ThankYouMsg = styled.h4`
   }
 `
 
+const SendLoadingContainer = styled.div`
+  background-color: rgba(0,0,0,.2);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+const SendLoading = styled.div`
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  border: 2px solid #f3f3f3;
+  border-left: 2px solid ${({theme})=>  theme.blue}};
+  border-bottom: 2px solid ${({theme})=>  theme.blue}};
+  border-radius: 50%;
+  animation: ${spin} 1.5s ease-in-out infinite
+`
 export default function ContactMe() {
-  const [sent, updateSent] = useState('')
+  const [sent, updateSent] = useState({ msg: '' })
   const [emailData, setEmailData] = useState(
     {
       name: '',
@@ -211,7 +232,10 @@ export default function ContactMe() {
             }} type="button">Send</SendBtn>
           }
           {sent.msg === 'sending' &&
-            <SendBtn disabled type="button" sendingColor="grey">Sending</SendBtn>
+            <SendLoadingContainer>
+              <SendBtn disabled type="button" sendingColor="grey">Sending</SendBtn>
+              <SendLoading></SendLoading>
+            </SendLoadingContainer>
           }
           {sent.msg === 'success' &&
             <ThankYouMsg>Thanks for the Message!</ThankYouMsg>
