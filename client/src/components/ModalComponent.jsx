@@ -52,7 +52,7 @@ const Close = styled.img`
   position: absolute;
   right: 0%;
   top: 0%;
-  margin: 50px;
+  margin: 15px;
 `
 const Lnk = styled.a`
   text-decoration: none;
@@ -94,7 +94,11 @@ export default function ModalComponent({
                 window.scrollTo(0, 1730)
               }
               } to='#work'>What I Do</Lnk>
-              <Lnk2 onClick={() => setModal(false)} to='/blog'>Blog</Lnk2>
+              <Lnk onClick={() => setModal(false)}
+                href='https://ashleaamorgan.medium.com/'
+                target="_blank"
+                rel="noopener noreferrer"
+              >Blog</Lnk>
               <Lnk onClick={() => {
                 setModal(false)
                 window.scrollTo(0, 2435)
