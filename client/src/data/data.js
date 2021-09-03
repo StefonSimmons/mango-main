@@ -1,15 +1,31 @@
 import article1 from '../assets/article1.png'
 import article2 from '../assets/article2.png'
 import article3 from '../assets/article3.png'
-import article4 from '../assets/article4.png'
+// import article4 from '../assets/article4.png'
 import article5 from '../assets/article5.png'
 import article6 from '../assets/article6.jpg'
+import article7 from '../assets/article7.png'
+import article8 from '../assets/article8.jpg'
 
 import outreach1 from '../assets/late-night-science.png'
 import outreach2 from '../assets/sci-sub.png'
 import outreach3 from '../assets/ashlea-helen.jpg'
 
 export const articleData = [
+  {
+    title: '2021 Bio-Rad Science Writing Competition, 2nd Place',
+    subtitle: 'Thoughts of Mice: Understanding the Role Serotonin Plays in Cognitive Flexibility',
+    description: '“Describe what you do (wrong answers only)!” I saw this Facebook post and wanted to respond. After thinking for a bit, I got it: “I put mice in boxes in the hope that one day they will tell me what they’re thinking.” It was a joke, but in some ways, I wasn’t kidding.',
+    image: article7,
+    url: 'https://www.bio-rad-antibodies.com/blog/thoughts-of-mice-serotonin.html?fbclid=IwAR3O-wEMdDu2-Ocdh93nAkGl6woex0K-mzp2j8jYmFv869y2dSOjMcDxLM4'
+  },
+  {
+    title: 'Experience and Environment: One Neuroscientist’s View on Belonging',
+    subtitle: 'Society for Neuroscience (SfN) Neuronline, June 2021',
+    description: 'I think most of us have experienced the unique emotions of isolation and loneliness at some point, at the very least throughout the COVID-19 pandemic. Throughout my life, I wondered what makes us feel and act on emotions like loneliness.',
+    image: article8,
+    url: 'https://neuronline.sfn.org/diversity/experience-and-environment'
+  },
   {
     title: 'Thinking Flexibly about Serotonin [PhDish]',
     description: 'Cognitive flexibility, in its simplest form, is the ability to think about more than one concept simultaneously. Critically, however, we rely on our ability to not only consider two or more concepts but also switch between these concepts and adapt our behavior based on what’s happening around us. Throughout my doctoral research, I’ve investigated how a chemical called serotonin is involved in this ability.',
@@ -21,12 +37,12 @@ export const articleData = [
     image: article5,
     url: 'https://columbiacovid.weebly.com/blog/if-not-now-when-if-not-us-who-perspectives-on-stepping-up-during-dual-pandemics'
   },
-  {
-    title: 'Cultivating my social media garden during dual pandemics [Medium]',
-    description: "In this Medium article, I share how I changed my strategy of talking to people. and offer tips I've used in trying to expand past the online echo chamber of my social media bubble.",
-    image: article4,
-    url: 'https://medium.com/@ashleaamorgan/cultivating-my-social-media-garden-during-dual-pandemics-27ae0c865765'
-  },
+  // {
+  //   title: 'Cultivating my social media garden during dual pandemics [Medium]',
+  //   description: "In this Medium article, I share how I changed my strategy of talking to people. and offer tips I've used in trying to expand past the online echo chamber of my social media bubble.",
+  //   image: article4,
+  //   url: 'https://medium.com/@ashleaamorgan/cultivating-my-social-media-garden-during-dual-pandemics-27ae0c865765'
+  // },
   {
     title: '(Re)claiming my scientific identity during dual pandemics [Medium]',
     description: "Writing for a public blog for Columbia's Researchers Against COVID-19 blog required me to sit face to face with two identities — being a scientist and being a writer.",
@@ -72,16 +88,16 @@ export const currentResearch = [
 
 export const outreachData = [
   {
-    title: 'Late Night Science - VP & Coordinator',
-    description: 'Late Night Science (LNS) is a seminar series held monthly by Columbia University Neuroscience Outreach (CUNO). Each month a graduate student or postdoc fellow discusses their scientific research with a non-scientific audience. Talks are always followed by a lab tour. Events are posted here.',
-    image: outreach1,
-    url: 'https://cuno.zuckermaninstitute.columbia.edu/directory/ashlea-ariel-morgan'
-  },
-  {
     title: 'SciSub - Co-founder, EIC, & writer',
     description: 'Scientist on the Subway (SciSub) is a blog dedicated to highlighting the trajectories that lead scientists to where they are now, touching on both the challenges and triumphs. We show learners of all ages that scientists come from many backgrounds and can be at different stages of their scientific career.',
     image: outreach2,
     url: 'https://scisub.com/our-team/'
+  },
+  {
+    title: 'Late Night Science - VP & Coordinator',
+    description: 'Late Night Science (LNS) is a seminar series held monthly by Columbia University Neuroscience Outreach (CUNO). Each month a graduate student or postdoc fellow discusses their scientific research with a non-scientific audience. Talks are always followed by a lab tour. Events are posted here.',
+    image: outreach1,
+    url: 'https://cuno.zuckermaninstitute.columbia.edu/directory/ashlea-ariel-morgan'
   },
   {
     title: 'Neuroscience & Jazz: Hearing Harmony with Helen Sung feat. Ashlea Morgan',

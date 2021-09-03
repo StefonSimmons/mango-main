@@ -45,6 +45,13 @@ const Title = styled.h2`
     font-weight: 700
   }
 `
+const Subtitle = styled.h3`
+  font-size: 18px;
+  @media(max-width: 400px){
+    font-size: 14px;
+    font-weight: 700
+  }
+`
 const Description = styled.p`
   font-size: 24px;
   margin: 50px 0;
@@ -89,6 +96,7 @@ export default function Articles({ articleData }) {
         <Image src={article.image} alt={article.title} />
         <Details>
           <Title>{article.title}</Title>
+          <Subtitle>{article.subtitle}</Subtitle>
           <Description>{article.description}</Description>
           <BtnLnk href={article.url} target='_blank' rel="noopener noreferrer">
             {article.url.includes('facebook') ?
