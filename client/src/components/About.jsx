@@ -27,10 +27,10 @@ const AboutSection = styled.section`
 `
 const AboutBox = styled.section`
   background-color: ${({ theme }) => theme.orangeTrans};
-  height: 66%;
-  width: 433px;
+  min-height: 66%;
+  width: 40vw;
   margin: 100px;
-  padding: 70px 100px;
+  padding: 70px 70px 35px 70px;
   border-radius: 3px;
   animation: ${fadeIn} 2s ease-in-out;
 
@@ -78,7 +78,7 @@ export default function About() {
       <AboutSection>
         <AboutBox>
           <AboutTitle>About Me</AboutTitle>
-          <Description>I'm Ashlea Morgan, scientist and writer. As a doctoral candidate in Neurobiology & Behavior at Columbia University, I study how neural signaling drives our ability to regulate emotions and behave flexibly. As a writer, I compose articles on scientific research for both scientific and general audiences and integrate those stories into other topics involving what makes us who we are.</Description>
+          <Description>I'm Ashlea Morgan, medical writer. As a writer, I compose articles on biomedical research for both specialist and general audiences. As a blogger, I integrate my scientific knowledge with life experiences to craft poems, essays, and stories about what makes us who we are. My dissertation, 'Serotonin Input to the Medial Prefrontal Cortex Promotes Behaviorial Flexibility' describes how neural serotonin signaling drives our ability to regulate emotions and behave flexibly.</Description>
         </AboutBox>
       </AboutSection>
     </BackgroundImage>

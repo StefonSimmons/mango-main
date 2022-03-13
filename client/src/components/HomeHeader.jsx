@@ -78,9 +78,9 @@ export default function HomeHeader() {
         <LeftArea>
           <ColorBlock>
             <Titles>
-              <Title>Neuroscientist.</Title>
-              <Title>Ph.D Candidate.</Title>
-              <Title>Writer.</Title>
+              <Title>Medical Writer.</Title>
+              <Title>Neuroscience Ph.D.</Title>
+              <Title>Blogger.</Title>
             </Titles>
           </ColorBlock>
         </LeftArea>

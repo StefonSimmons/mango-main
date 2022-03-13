@@ -58,7 +58,7 @@ export default function NavBar() {
     <Main>
       <BtnSection>
         <a href='#work'>
-          <Btn>What I Do</Btn>
+          <Btn>What I've Done</Btn>
         </a>
         <a href='https://ashleaamorgan.medium.com/' target="_blank" rel="noopener noreferrer">
           <Btn>Blog</Btn>

@@ -6,12 +6,20 @@ import article5 from '../assets/article5.png'
 import article6 from '../assets/article6.jpg'
 import article7 from '../assets/article7.png'
 import article8 from '../assets/article8.jpg'
+import article9 from '../assets/article9.jpg'
 
 import outreach1 from '../assets/late-night-science.png'
 import outreach2 from '../assets/sci-sub.png'
 import outreach3 from '../assets/ashlea-helen.jpg'
 
 export const articleData = [
+  {
+    title: 'Research!America: 2021 National Health Research Forum Op-ed Competition, 1st Place',
+    subtitle: 'Communicating the Value of Science Through Op-Ed Writing',
+    description: '“Ashlea’s piece [Start with "why" Reducing Vaccine Hesitancy Requires Compassion and Conversation] offers a very timely and important perspective from a Black female scientist that weaved the personal with science well. Stories like Ashlea’s have real potential to positively impact approaches to building vaccine confidence"',
+    image: article9,
+    url: 'https://civicsciencefellows.org/stories/communicating-the-value-of-science-through-op-ed-writing/'
+  },
   {
     title: '2021 Bio-Rad Science Writing Competition, 2nd Place',
     subtitle: 'Thoughts of Mice: Understanding the Role Serotonin Plays in Cognitive Flexibility',

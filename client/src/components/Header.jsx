@@ -149,7 +149,7 @@ export default function Header() {
       <Lnk href='/'>
         <Section className='container'>
           <Logo src={brainLogo} alt="brain-logo" />
-          <Title>Ashlea A. Morgan</Title>
+          <Title>Ashlea A. Morgan, Ph.D.</Title>
         </Section>
         <HomeTitle id="home">Home</HomeTitle>
       </Lnk>

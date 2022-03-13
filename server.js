@@ -4,7 +4,7 @@ const {USERNAME, TOKEN} = process.env
 // SETUP SERVER
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3002;
 
 // SETUP SERVER (ADDITIONAL)
 const cors = require('cors')
