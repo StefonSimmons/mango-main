@@ -27,7 +27,7 @@ export default function SocialMedias() {
       <Item href='https://twitter.com/ashleaamorgan1' target='_blank' rel="noopener noreferrer">
         <img src={twitter} alt="twitter-icon" />
       </Item>
-      <Item href='https://www.linkedin.com/in/ashlea-a-morgan-ma-29818a35/' target='_blank' rel="noopener noreferrer">
+      <Item href='https://www.linkedin.com/in/ashlea-a-morgan/' target='_blank' rel="noopener noreferrer">
         <img src={linkedin} alt="linkedin-icon" />
       </Item>
       <MediumLnk href='https://medium.com/@ashleaamorgan' target='_blank' rel="noopener noreferrer">Medium</MediumLnk>
