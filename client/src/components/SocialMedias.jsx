@@ -24,7 +24,7 @@ const Item = styled.a`
 export default function SocialMedias() {
   return (
     <LinkList>
-      <Item href='https://twitter.com/ashleaamorgan1' target='_blank' rel="noopener noreferrer">
+      <Item href='https://twitter.com/AshleaIsHere' target='_blank' rel="noopener noreferrer">
         <img src={twitter} alt="twitter-icon" />
       </Item>
       <Item href='https://www.linkedin.com/in/ashlea-a-morgan/' target='_blank' rel="noopener noreferrer">
